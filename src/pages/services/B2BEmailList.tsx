@@ -1,0 +1,50 @@
+import React from 'react';
+import ServicePageTemplate from '@/components/ServicePageTemplate';
+
+const B2BEmailList: React.FC = () => {
+  const contentBlocks = [
+    {
+      title: "Unlock Targeted Outreach and Lead Generation",
+      content: "Our B2B email lists provide you with verified, up-to-date contact information for decision-makers across industries. Each list is carefully curated and validated to ensure maximum deliverability and response rates. Whether you're targeting C-level executives, department heads, or specific job functions, our comprehensive databases help you reach the right prospects at the right time.",
+      imagePosition: 'left' as const
+    },
+    {
+      title: "Maximize Efficiency and Drive Results",
+      content: "Stop wasting time on outdated contacts and unresponsive leads. Our B2B email lists are continuously updated and verified through multiple data sources, ensuring 99%+ accuracy rates. With detailed segmentation options including industry, company size, job title, and geographic location, you can create highly targeted campaigns that deliver measurable ROI.",
+      imagePosition: 'right' as const
+    },
+    {
+      title: "Scalable, Privacy-Compliant Lists",
+      content: "All our B2B email lists are fully compliant with GDPR, CAN-SPAM, and other data protection regulations. We provide transparent opt-out mechanisms and maintain detailed records of data sources and consent. Scale your outreach efforts confidently with our enterprise-grade data infrastructure that supports campaigns of any size.",
+      imagePosition: 'left' as const
+    }
+  ];
+
+  const features = [
+    "99%+ Email Accuracy Rate",
+    "GDPR & CAN-SPAM Compliant",
+    "Real-time Data Verification",
+    "Custom Segmentation Options",
+    "Multiple Export Formats",
+    "24/7 Customer Support"
+  ];
+
+  const breadcrumbs = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'B2B Email Lists', href: '/services/b2b-email-list' }
+  ];
+
+  return (
+    <ServicePageTemplate
+      title="B2B Email Lists"
+      subtitle="Access verified contact databases across industries and job functions"
+      description="Transform your outreach strategy with our comprehensive B2B email lists. Get direct access to verified decision-makers, department heads, and key stakeholders across every major industry. Our data is continuously updated and validated to ensure maximum deliverability and campaign success."
+      contentBlocks={contentBlocks}
+      features={features}
+      breadcrumbs={breadcrumbs}
+    />
+  );
+};
+
+export default B2BEmailList;
