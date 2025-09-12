@@ -24,14 +24,14 @@ const defaultTestimonials: Testimonial[] = [
     name: "Sarah Johnson",
     company: "TechCorp Solutions", 
     role: "Marketing Director",
-    content: "Global Datasys Group transformed our lead generation strategy. Their data quality is exceptional, and we've seen a 300% increase in qualified leads within the first quarter.",
+    content: "DataInGo Solutions transformed our lead generation strategy. Their data quality is exceptional, and we've seen a 300% increase in qualified leads within the first quarter.",
     rating: 5
   },
   {
     name: "Michael Chen",
     company: "HealthFirst Medical",
     role: "Business Development Manager", 
-    content: "The healthcare email lists provided by Global Datasys were incredibly accurate and targeted. We were able to connect with key decision-makers and expand our network significantly.",
+    content: "The healthcare email lists provided by DataInGo Solutions were incredibly accurate and targeted. We were able to connect with key decision-makers and expand our network significantly.",
     rating: 5
   },
   {
@@ -45,21 +45,21 @@ const defaultTestimonials: Testimonial[] = [
     name: "David Thompson",
     company: "Digital Innovations",
     role: "CEO",
-    content: "Working with Global Datasys has been a game-changer for our B2B outreach. The data accuracy and the digital marketing support have exceeded our expectations completely.",
+    content: "Working with DataInGo Solutions has been a game-changer for our B2B outreach. The data accuracy and the digital marketing support have exceeded our expectations completely.",
     rating: 5
   },
   {
     name: "Lisa Park",
     company: "Financial Services Group",
     role: "VP of Marketing",
-    content: "The technology email lists and LinkedIn campaigns provided by Global Datasys helped us connect with C-level executives. Our conversion rates improved by 250% in just two months.",
+    content: "The technology email lists and LinkedIn campaigns provided by DataInGo Solutions helped us connect with C-level executives. Our conversion rates improved by 250% in just two months.",
     rating: 5
   }
 ];
 
 const TestimonialsCarousel: React.FC<TestimonialsCarouselProps> = ({
   title = "What Our Clients Say",
-  subtitle = "Discover how Global Datasys Group has helped businesses like yours achieve remarkable results.",
+  subtitle = "Discover how DataInGo Solutions has helped businesses like yours achieve remarkable results.",
   testimonials = defaultTestimonials,
   className = "",
   autoPlay = true,

@@ -22,25 +22,61 @@ import {
 const About: React.FC = () => {
   const leadership = [
     {
-      name: "John Smith",
-      role: "CEO & Founder",
+      name: "John Kennedy",
+      role: "CEO",
       image: "",
       description: "15+ years in B2B data solutions"
     },
     {
-      name: "Sarah Johnson", 
+      name: "Mike Solomon", 
+      role: "VP of Sales",
+      image: "",
+      description: "Expert in Sales and compliance"
+    },
+    {
+      name: "Mia Miller", 
       role: "VP of Data Operations",
       image: "",
       description: "Expert in data quality and compliance"
     },
     {
-      name: "Michael Chen",
+      name: "Pat Wade",
       role: "Head of Digital Marketing",
       image: "",
       description: "Specializes in performance marketing"
     },
+        {
+      name: "Gopal Kumar", 
+      role: "Sr. Director of Business Development",
+      image: "",
+      description: "Expert in Business Growth Strategies"
+    },
     {
-      name: "Emily Rodriguez",
+      name: "Mohammad Ayan", 
+      role: "Director of Business Development",
+      image: "",
+      description: "Expert in solving Client demands"
+    },
+    {
+      name: "Daniel Brown", 
+      role: "Sr. Sales Manager",
+      image: "",
+      description: "Expert in B2B Sales and Marketing"
+    },
+    {
+      name: "Mark Harris", 
+      role: "Sales Manager",
+      image: "",
+      description: "Expert in Client Relationship Management"
+    },
+    {
+      name: "Mohammad Zayan", 
+      role: "Manager - HR and Customer Service",
+      image: "",
+      description: "Expert in Talent Acquisition and Customer Relations"
+    },
+    {
+      name: "Isha Edwards",
       role: "Customer Success Director", 
       image: "",
       description: "Focused on client satisfaction and growth"
@@ -71,17 +107,18 @@ const About: React.FC = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-poppins">
-              Global Datasys Group – Your Success Catalyst
+              DataInGo Solutions – Your Success Catalyst A Strategic Partner in Your Success
             </h2>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-8">
-              Founded with a vision to transform how businesses connect with their ideal customers, 
-              Global Datasys Group has evolved into a leading provider of B2B data solutions and 
-              digital marketing services. We combine cutting-edge technology with human expertise 
-              to deliver data-driven growth strategies that work.
+            <p className="text-lg text-foreground/70 leading-relaxed mb-8 text-left">
+              At DataInGo Solutions, we specialize in delivering end-to-end data solutions and strategic digital marketing services that drive business growth. Our expertise spans across various industries including healthcare, IT, and retail where we partner with clients to craft tailored lead generation and business development strategies.</p>
+            <p className="text-lg text-foreground/70 leading-relaxed mb-8 text-left">
+              Our key strength lies in providing accurate, up-to-date contact data for decision-makers across global markets. In addition to our customized contact lists, we offer targeted digital marketing campaigns designed to amplify your outreach, boost engagement, and deliver measurable results.</p>
+            <p className="text-lg text-foreground/70 leading-relaxed mb-8 text-left">
+              With a strong focus on data precision and client satisfaction, we empower businesses to strengthen their market presence, generate high-quality leads, and meet their sales and marketing goals with confidence.
             </p>
             <p className="text-lg text-foreground/70 leading-relaxed">
-              Our commitment to quality, compliance, and customer success has made us the preferred 
-              partner for over 1,000 businesses worldwide, from startups to Fortune 500 companies.
+              <strong>Our commitment to quality, compliance, and customer success has made us the preferred
+              partner for over 2,000 businesses worldwide, from startups to Fortune 500 companies.</strong>
             </p>
           </div>
         </div>
@@ -99,10 +136,8 @@ const About: React.FC = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 font-poppins">
                 Our Vision
               </h3>
-              <p className="text-foreground/70 leading-relaxed mb-6">
-                To be the global leader in B2B data solutions, empowering every business 
-                with the insights and connections they need to thrive in an increasingly 
-                competitive marketplace.
+              <p className="text-foreground/70 leading-relaxed mb-6 text-left">
+                At DataInGo Solutions, we strive to lead the way in data-driven digital marketing and precision-based solutions. Our approach is rooted in innovation, continuous enhancement, and a strong commitment to ethical data practices. We empower our clients with strategic tools, actionable insights, and cutting-edge solutions to succeed in today’s fast-changing digital landscape.
               </p>
               <ul className="text-foreground/70 space-y-2 text-left">
                 <li className="flex items-start space-x-2">
@@ -129,9 +164,7 @@ const About: React.FC = () => {
                 Our Mission
               </h3>
               <p className="text-foreground/70 leading-relaxed mb-6">
-                To deliver exceptional B2B data solutions and digital marketing services 
-                that help businesses identify, connect with, and convert their ideal 
-                prospects into long-term customers.
+                At DataInGo Solutions, our core mission is to serve as a strategic partner in achieving your marketing goals by connecting you with the right audience. We provide clients with access to high-quality, reliable data and dedicated customer support. Our commitment is to be your trusted resource for data-driven insights and impactful marketing strategies that drive measurable and sustainable results.
               </p>
               <ul className="text-foreground/70 space-y-2 text-left">
                 <li className="flex items-start space-x-2">
@@ -160,7 +193,7 @@ const About: React.FC = () => {
               Our Leadership Team
             </h2>
             <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-              Meet the experienced professionals who lead Global Datasys Group with vision, 
+              Meet the experienced professionals who lead DataInGo Solutions with vision, 
               expertise, and an unwavering commitment to client success.
             </p>
           </div>
@@ -197,7 +230,7 @@ const About: React.FC = () => {
       {/* Why Choose Us */}
       <ReasonsGrid 
         title="Why Choose Us?"
-        subtitle="Discover what sets Global Datasys Group apart in the competitive world of B2B data and digital marketing."
+        subtitle="Discover what sets DataInGo Solutions apart in the competitive world of B2B data and digital marketing."
       />
 
       {/* Company Stats */}
@@ -217,14 +250,14 @@ const About: React.FC = () => {
               <div className="w-16 h-16 bg-hero-text/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-hero-text" />
               </div>
-              <div className="text-4xl font-bold text-hero-text mb-2">1000+</div>
+              <div className="text-4xl font-bold text-hero-text mb-2">2000+</div>
               <div className="text-secondary-dark-foreground/80">Satisfied Clients</div>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-hero-text/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Globe className="w-8 h-8 text-hero-text" />
               </div>
-              <div className="text-4xl font-bold text-hero-text mb-2">50M+</div>
+              <div className="text-4xl font-bold text-hero-text mb-2">80M+</div>
               <div className="text-secondary-dark-foreground/80">Quality Leads Delivered</div>
             </div>
             <div className="text-center">

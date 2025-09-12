@@ -22,7 +22,7 @@ const Index: React.FC = () => {
 
       {/* Hero Section */}
       <Hero 
-        title="Find Marketing Solutions For Your Business With Global Datasys Group"
+        title="Find Marketing Solutions For Your Business With DataInGo Solutions"
         subtitle="Transform your business growth with our comprehensive B2B data solutions, targeted email lists, and strategic digital marketing services designed to connect you with your ideal customers."
       />
 

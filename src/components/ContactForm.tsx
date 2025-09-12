@@ -22,7 +22,7 @@ const contactInfo: ContactInfo[] = [
   {
     icon: MapPin,
     label: "Address",
-    value: "1309 Coffeen Avenue, STE 1200, Sheridan, Wyoming 82801"
+    value: "16192 Coastal Highway, Lewes, DE 19958 USA" 
   },
   {
     icon: Phone,
@@ -33,19 +33,19 @@ const contactInfo: ContactInfo[] = [
   {
     icon: Mail,
     label: "Mailbox",
-    value: "info@globaldatasysgroup.com",
-    href: "mailto:info@globaldatasysgroup.com"
+    value: "projects@dataingo.com",
+    href: "mailto:projects@dataingo.com"
   },
   {
     icon: Mail,
     label: "Sales & Support",
-    value: "sales@globaldatasysgroup.com",
-    href: "mailto:sales@globaldatasysgroup.com"
+    value: "mark.harris@dataingo.com",
+    href: "mailto:mark.harris@dataingo.com"
   },
   {
     icon: Clock,
     label: "Working Hours",
-    value: "Monday - Friday : 08 AM - 05 PM"
+    value: "Monday - Friday : 09 AM - 05 PM"
   }
 ];
 

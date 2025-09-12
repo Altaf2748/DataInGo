@@ -47,7 +47,7 @@ const defaultReasons: Reason[] = [
   },
   {
     title: "Authorized Data",
-    description: "100% verified and compliant data sourced through legitimate channels.",
+    description: "100% verified and compliant data sourced through legitimate channels & Fully compliant with GDPR, CAN-SPAM, and anti-spam regulations.",
     icon: CheckCircle
   },
   {
@@ -126,11 +126,11 @@ const ReasonsGrid: React.FC<ReasonsGridProps> = ({
         <div className="bg-gradient-primary rounded-2xl p-8 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="text-hero-text">
-              <div className="text-3xl md:text-4xl font-bold mb-2">1000+</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">2000+</div>
               <div className="text-hero-text/80 text-sm">Happy Clients</div>
             </div>
             <div className="text-hero-text">
-              <div className="text-3xl md:text-4xl font-bold mb-2">50M+</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">80M+</div>
               <div className="text-hero-text/80 text-sm">Quality Leads</div>
             </div>
             <div className="text-hero-text">
@@ -147,7 +147,7 @@ const ReasonsGrid: React.FC<ReasonsGridProps> = ({
         {/* Testimonial Quote */}
         <div className="mt-12 text-center">
           <blockquote className="text-xl md:text-2xl text-foreground/80 italic max-w-4xl mx-auto mb-6">
-            "Global Datasys Group has been instrumental in our lead generation success. 
+            "DataInGo Solutions has been instrumental in our lead generation success. 
             Their data quality and customer service are unmatched in the industry."
           </blockquote>
           <div className="flex items-center justify-center space-x-4">

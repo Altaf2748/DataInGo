@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
                 <span className="text-hero-text font-bold text-xl">GD</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-secondary-dark-foreground">Global Datasys Group</h3>
+                <h3 className="text-xl font-bold text-secondary-dark-foreground">DataInGo Solutions</h3>
                 <p className="text-secondary-dark-foreground/70 text-sm">Marketing Solutions</p>
               </div>
             </Link>
@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-3 text-sm">
                 <MapPin className="w-4 h-4 text-primary-start flex-shrink-0" />
                 <span className="text-secondary-dark-foreground/80">
-                  1309 Coffeen Avenue, STE 1200, Sheridan, Wyoming 82801
+                  16192 Coastal Highway, Lewes, DE 19958 USA
                 </span>
               </div>
               <div className="flex items-center space-x-3 text-sm">
@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
                   href="mailto:info@globaldatasysgroup.com" 
                   className="text-secondary-dark-foreground/80 hover:text-primary-start transition-colors"
                 >
-                  info@globaldatasysgroup.com
+                  projects@dataingo.com
                 </a>
               </div>
             </div>
@@ -175,7 +175,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             {/* Copyright */}
             <p className="text-secondary-dark-foreground/70 text-sm">
-              © {currentYear} Global Datasys Group. All rights reserved.
+              © {2021} DataInGo Solutions. All rights reserved.
             </p>
 
             {/* Legal Links */}

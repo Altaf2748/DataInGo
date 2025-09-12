@@ -217,7 +217,7 @@ const Services: React.FC = () => {
                         <div className="grid grid-cols-1 gap-4 text-sm">
                           <div className="flex items-center justify-center space-x-2">
                             <Users className="w-4 h-4" />
-                            <span>1000+ Happy Clients</span>
+                            <span>2000+ Happy Clients</span>
                           </div>
                           <div className="flex items-center justify-center space-x-2">
                             <TrendingUp className="w-4 h-4" />
@@ -225,7 +225,7 @@ const Services: React.FC = () => {
                           </div>
                           <div className="flex items-center justify-center space-x-2">
                             <CheckCircle className="w-4 h-4" />
-                            <span>99%+ Data Accuracy</span>
+                            <span>98%+ Data Accuracy</span>
                           </div>
                         </div>
                       </div>

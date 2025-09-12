@@ -15,10 +15,10 @@ interface IntroSectionProps {
 }
 
 const IntroSection: React.FC<IntroSectionProps> = ({
-  title = "Grow and Create Leads for your business with Global Datasys Group",
+  title = "Grow and Create Leads for your business with DataInGo Solutions",
   content = "We are your trusted partner for comprehensive B2B data solutions and digital marketing services. Our expert team helps businesses connect with their ideal customers through verified, high-quality data and targeted marketing campaigns that drive real results.",
   features = [
-    "99% Data Accuracy Guarantee",
+    "98% Data Accuracy Guarantee",
     "GDPR & CAN-SPAM Compliant",
     "24/7 Customer Support",
     "Custom Data Solutions",
@@ -28,7 +28,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
   ctaText = "Get Your Custom Quote",
   ctaHref = "/contact",
   imageUrl = "",
-  imageAlt = "Global Datasys Group Team",
+  imageAlt = "DataInGo Solutions Team",
   reversed = false,
   className = ""
 }) => {
@@ -114,7 +114,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
                         />
                       </svg>
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">Global Datasys Team</h3>
+                    <h3 className="text-xl font-semibold mb-2">DataInGo Solutions Team</h3>
                     <p className="text-hero-text/80">Expert professionals ready to help</p>
                   </div>
                 </div>
@@ -128,15 +128,15 @@ const IntroSection: React.FC<IntroSectionProps> = ({
             {/* Stats Overlay */}
             <div className="grid grid-cols-3 gap-4 mt-8">
               <div className="text-center p-4 bg-card rounded-lg shadow-card">
-                <div className="text-2xl font-bold text-primary mb-1">1000+</div>
+                <div className="text-2xl font-bold text-primary mb-1">2000+</div>
                 <div className="text-foreground/70 text-sm">Satisfied Clients</div>
               </div>
               <div className="text-center p-4 bg-card rounded-lg shadow-card">
-                <div className="text-2xl font-bold text-primary mb-1">50M+</div>
+                <div className="text-2xl font-bold text-primary mb-1">80M+</div>
                 <div className="text-foreground/70 text-sm">Quality Leads</div>
               </div>
               <div className="text-center p-4 bg-card rounded-lg shadow-card">
-                <div className="text-2xl font-bold text-primary mb-1">99%</div>
+                <div className="text-2xl font-bold text-primary mb-1">98%</div>
                 <div className="text-foreground/70 text-sm">Data Accuracy</div>
               </div>
             </div>

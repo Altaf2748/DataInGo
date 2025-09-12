@@ -24,7 +24,7 @@ interface ProcessFlowProps {
 const defaultSteps: ProcessStep[] = [
   {
     title: "Client Needs",
-    description: "Understanding Your Requirements",
+    description: "We tailor each database to your specific needs, ensuring relevance and accuracy.",
     icon: MessageSquare,
     details: [
       "Initial consultation call",
@@ -35,7 +35,7 @@ const defaultSteps: ProcessStep[] = [
   },
   {
     title: "Data Aggregation", 
-    description: "Collecting & Sourcing Data",
+    description: "Our databases are custom-built to adhere to the unique standards and compliance needs of your industry.",
     icon: Database,
     details: [
       "Multi-source data collection",
@@ -46,7 +46,7 @@ const defaultSteps: ProcessStep[] = [
   },
   {
     title: "Data Validation",
-    description: "Quality Assurance & Verification",
+    description: "All data undergoes a meticulous verification process to guarantee accuracy and dependability.",
     icon: CheckCircle,
     details: [
       "Email validation process",
@@ -57,7 +57,7 @@ const defaultSteps: ProcessStep[] = [
   },
   {
     title: "Shipping and Assistance",
-    description: "Delivery & Ongoing Support",
+    description: "We ensure delivery within 2–5 business days and provide ongoing support throughout the process.",
     icon: Headphones,
     details: [
       "Secure data delivery",

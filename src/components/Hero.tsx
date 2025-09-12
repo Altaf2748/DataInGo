@@ -92,11 +92,11 @@ const Hero: React.FC<HeroProps> = ({
           {/* Stats or Additional Info */}
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center animate-fade-in">
             <div className="text-hero-text/80">
-              <div className="text-2xl md:text-3xl font-bold text-gradient mb-2">1000+</div>
+              <div className="text-2xl md:text-3xl font-bold text-gradient mb-2">2000+</div>
               <div className="text-sm">Happy Clients</div>
             </div>
             <div className="text-hero-text/80">
-              <div className="text-2xl md:text-3xl font-bold text-gradient mb-2">50M+</div>
+              <div className="text-2xl md:text-3xl font-bold text-gradient mb-2">80M+</div>
               <div className="text-sm">Leads Generated</div>
             </div>
             <div className="text-hero-text/80">

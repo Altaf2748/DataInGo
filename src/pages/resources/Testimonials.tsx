@@ -12,7 +12,7 @@ const Testimonials: React.FC = () => {
       company: "TechCorp Solutions",
       image: "/placeholder-avatar.jpg",
       rating: 5,
-      testimonial: "Global Datasys Group transformed our lead generation strategy completely. Their B2B email lists are incredibly accurate, and we've seen a 300% increase in qualified leads within just three months. The team's expertise in technology sector targeting was exactly what we needed.",
+      testimonial: "DataInGo Solutions transformed our lead generation strategy completely. Their B2B email lists are incredibly accurate, and we've seen a 300% increase in qualified leads within just three months. The team's expertise in technology sector targeting was exactly what we needed.",
       results: ["300% increase in qualified leads", "99.2% email deliverability", "45% reduction in cost per lead"],
       industry: "Technology"
     },
@@ -99,7 +99,7 @@ const Testimonials: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">1000+</div>
+              <div className="text-3xl font-bold text-primary mb-2">2000+</div>
               <div className="text-foreground/70">Happy Clients</div>
             </div>
             <div className="text-center">
