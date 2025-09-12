@@ -21,7 +21,7 @@ const TermsOfService: React.FC = () => {
               </p>
               
               <p className="mb-8">
-                These Terms of Service ("Terms") govern your use of the Global Datasys Group website 
+                These Terms of Service ("Terms") govern your use of the DataInGo Solutions website 
                 and services. By accessing or using our services, you agree to be bound by these Terms.
               </p>
 
@@ -65,7 +65,7 @@ const TermsOfService: React.FC = () => {
                 Limitations
               </h2>
               <p className="mb-6">
-                In no event shall Global Datasys Group be liable for any damages arising out of the use 
+                In no event shall DataInGo Solutions be liable for any damages arising out of the use 
                 or inability to use the materials on our website or services, even if we have been 
                 notified orally or in writing of the possibility of such damage.
               </p>
@@ -83,9 +83,9 @@ const TermsOfService: React.FC = () => {
                 Contact Information
               </h2>
               <div className="bg-accent/20 p-4 rounded-lg">
-                <p><strong>Email:</strong> info@globaldatasysgroup.com</p>
+                <p><strong>Email:</strong> projects@dataingo.com</p>
                 <p><strong>Phone:</strong> +1 307 683 8467</p>
-                <p><strong>Address:</strong> 1309 Coffeen Avenue, STE 1200, Sheridan, Wyoming 82801</p>
+                <p><strong>Address:</strong> 16192 Coastal Highway, Lewes, DE 19958 USA</p>
               </div>
 
               <p className="text-sm text-foreground/60 mt-8">

@@ -29,7 +29,7 @@ const Careers: React.FC = () => {
             Join Our Growing Team
           </h1>
           <p className="text-xl text-hero-text/90 mb-8 max-w-3xl mx-auto">
-            Build your career with Global Datasys Group and help businesses worldwide 
+            Build your career with DataInGo Solutions and help businesses worldwide 
             achieve their growth objectives through data-driven marketing solutions.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -48,7 +48,7 @@ const Careers: React.FC = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 font-poppins">
-              Why Choose Global Datasys Group?
+              Why Choose DataInGo Solutions?
             </h2>
             <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
               We're not just a workplace—we're a community of passionate professionals 
@@ -164,7 +164,7 @@ const Careers: React.FC = () => {
                 Our Company Culture
               </h2>
               <p className="text-foreground/70 text-lg leading-relaxed mb-6">
-                At Global Datasys Group, we believe that great results come from great people. 
+                At DataInGo Solutions, we believe that great results come from great people. 
                 Our culture is built on innovation, collaboration, and continuous learning. 
                 We foster an environment where creativity thrives and every team member 
                 can contribute to our shared success.

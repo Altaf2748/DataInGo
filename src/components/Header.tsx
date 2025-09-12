@@ -69,7 +69,7 @@ const Header: React.FC = () => {
               <span className="text-hero-text font-bold text-lg md:text-xl">GD</span>
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-lg md:text-xl font-bold text-nav-text">Global Datasys</h1>
+              <h1 className="text-lg md:text-xl font-bold text-nav-text">DataInGo Solutions</h1>
               <p className="text-xs text-nav-text/70">Marketing Solutions</p>
             </div>
           </Link>

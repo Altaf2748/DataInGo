@@ -23,7 +23,7 @@ const Services: React.FC = () => {
       description: "Comprehensive databases of verified business contacts across industries and job functions.",
       icon: Mail,
       href: "/services/b2b-email-list",
-      features: ["99%+ Accuracy Rate", "GDPR Compliant", "Real-time Verification", "Custom Segmentation"],
+      features: ["98%+ Accuracy Rate", "GDPR Compliant", "Real-time Verification", "Custom Segmentation"],
       subServices: [
         "Technology Email Lists",
         "Healthcare Email Lists", 

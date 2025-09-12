@@ -22,7 +22,7 @@ const Testimonials: React.FC = () => {
       company: "HealthTech Innovations",
       image: "/placeholder-avatar.jpg",
       rating: 5,
-      testimonial: "Working with Global Datasys Group has been a game-changer for our healthcare marketing campaigns. Their HIPAA-compliant healthcare email lists and data enrichment services helped us connect with the right decision-makers in hospitals and clinics nationwide.",
+      testimonial: "Working with DataInGo Solutions has been a game-changer for our healthcare marketing campaigns. Their HIPAA-compliant healthcare email lists and data enrichment services helped us connect with the right decision-makers in hospitals and clinics nationwide.",
       results: ["250% increase in appointment bookings", "68% improvement in email open rates", "40% boost in qualified healthcare leads"],
       industry: "Healthcare"
     },
@@ -32,7 +32,7 @@ const Testimonials: React.FC = () => {
       company: "Finance Pro Services",
       image: "/placeholder-avatar.jpg",
       rating: 5,
-      testimonial: "The custom email lists and digital marketing services from Global Datasys Group exceeded our expectations. Their understanding of the finance industry and compliance requirements made our campaigns both effective and compliant with regulations.",
+      testimonial: "The custom email lists and digital marketing services from DataInGo Solutions exceeded our expectations. Their understanding of the finance industry and compliance requirements made our campaigns both effective and compliant with regulations.",
       results: ["180% increase in consultation requests", "92% email deliverability rate", "35% growth in qualified financial leads"],
       industry: "Finance"
     },
@@ -42,7 +42,7 @@ const Testimonials: React.FC = () => {
       company: "Manufacturing Plus",
       image: "/placeholder-avatar.jpg",
       rating: 5,
-      testimonial: "Global Datasys Group's industry-specific email lists for manufacturing helped us reach decision-makers we couldn't connect with before. Their data enrichment services cleaned up our existing database and improved our overall marketing efficiency significantly.",
+      testimonial: "DataInGo Solutions's industry-specific email lists for manufacturing helped us reach decision-makers we couldn't connect with before. Their data enrichment services cleaned up our existing database and improved our overall marketing efficiency significantly.",
       results: ["220% increase in B2B inquiries", "89% email deliverability improvement", "50% reduction in marketing costs"],
       industry: "Manufacturing"
     },
@@ -52,7 +52,7 @@ const Testimonials: React.FC = () => {
       company: "EduTech Solutions",
       image: "/placeholder-avatar.jpg",
       rating: 5,
-      testimonial: "The team at Global Datasys Group understands the education technology market exceptionally well. Their targeted email campaigns and LinkedIn outreach helped us connect with educational institutions and increase our software adoption rates dramatically.",
+      testimonial: "The team at DataInGo Solutions understands the education technology market exceptionally well. Their targeted email campaigns and LinkedIn outreach helped us connect with educational institutions and increase our software adoption rates dramatically.",
       results: ["195% increase in demo requests", "73% improvement in lead quality", "42% growth in conversion rates"],
       industry: "Education Technology"
     },
@@ -62,7 +62,7 @@ const Testimonials: React.FC = () => {
       company: "Retail Solutions Inc",
       image: "/placeholder-avatar.jpg",
       rating: 5,
-      testimonial: "Global Datasys Group's retail industry email lists and digital marketing expertise helped us expand into new markets successfully. Their data quality is outstanding, and their customer service is responsive and professional throughout our partnership.",
+      testimonial: "DataInGo Solutions's retail industry email lists and digital marketing expertise helped us expand into new markets successfully. Their data quality is outstanding, and their customer service is responsive and professional throughout our partnership.",
       results: ["275% increase in retail partnerships", "85% email engagement rates", "38% improvement in sales pipeline"],
       industry: "Retail"
     }
@@ -93,7 +93,7 @@ const Testimonials: React.FC = () => {
           </h1>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto mb-12">
             Discover how businesses across industries have transformed their marketing 
-            results with Global Datasys Group's data solutions and digital marketing services.
+            results with DataInGo Solutions's data solutions and digital marketing services.
           </p>
 
           {/* Stats */}

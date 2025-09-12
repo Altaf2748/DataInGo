@@ -30,7 +30,7 @@ const Brochure: React.FC = () => {
               Brochure
             </h1>
             <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
-              Download our comprehensive brochure to learn more about Global Datasys Group's 
+              Download our comprehensive brochure to learn more about DataInGo Solutions's 
               services, solutions, and how we can help transform your business.
             </p>
           </div>

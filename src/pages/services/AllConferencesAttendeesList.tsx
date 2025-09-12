@@ -42,7 +42,7 @@ const AllConferencesAttendeesList: React.FC = () => {
     {
       icon: Users,
       title: "Verified Contacts",
-      description: "99%+ accuracy rate with real-time verification and regular data updates."
+      description: "98%+ accuracy rate with real-time verification and regular data updates."
     },
     {
       icon: Globe,
@@ -254,7 +254,7 @@ const AllConferencesAttendeesList: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-center space-x-2">
                     <CheckCircle className="w-5 h-5" />
-                    <span>99%+ Data Accuracy</span>
+                    <span>98%+ Data Accuracy</span>
                   </div>
                 </div>
               </div>

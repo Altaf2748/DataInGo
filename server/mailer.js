@@ -47,7 +47,7 @@ const sendContactFormEmail = async (formData, recipient = 'mark.harris@dataingo.
   const mailOptions = {
     from: process.env.SMTP_USER,
     to: recipient,
-    subject: 'New Contact Form Submission - Global Datasys Group',
+    subject: 'New Contact Form Submission - DataInGo Solutions',
     text: emailContent,
     html: `
       <h2>New Contact Form Submission</h2>

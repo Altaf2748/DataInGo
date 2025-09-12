@@ -119,7 +119,7 @@ const Contact: React.FC = () => {
               {/* Address & Contact */}
               <div>
                 <h3 className="text-2xl font-bold text-foreground mb-6 font-poppins">
-                  Global Datasys Group
+                  DataInGo Solutions
                 </h3>
                 
                 <div className="space-y-4">
@@ -154,10 +154,10 @@ const Contact: React.FC = () => {
                       <div className="space-y-1">
                         <div>
                           <a 
-                            href="mailto:info@globaldatasysgroup.com" 
+                            href="mailto:projects@dataingo.com" 
                             className="text-foreground/70 hover:text-primary transition-colors"
                           >
-                            info@globaldatasysgroup.com
+                            projects@dataingo.com
                           </a>
                         </div>
                         <div>
@@ -226,7 +226,7 @@ const Contact: React.FC = () => {
               <MapPin className="w-12 h-12 mx-auto mb-4 opacity-50" />
               <p>Interactive map would be embedded here</p>
               <p className="text-sm mt-2">
-                1309 Coffeen Avenue, STE 1200, Sheridan, Wyoming 82801
+                16192 Coastal Highway, Lewes, DE 19958 USA
               </p>
             </div>
           </div>

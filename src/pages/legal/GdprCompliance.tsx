@@ -21,7 +21,7 @@ const GdprCompliance: React.FC = () => {
               </p>
               
               <p className="mb-8">
-                Global Datasys Group is committed to protecting your personal data and respecting your 
+                DataInGo Solutions is committed to protecting your personal data and respecting your 
                 privacy rights under the General Data Protection Regulation (GDPR).
               </p>
 
@@ -97,10 +97,10 @@ const GdprCompliance: React.FC = () => {
                 Contact Our Data Protection Officer
               </h2>
               <div className="bg-accent/20 p-4 rounded-lg mb-6">
-                <p><strong>Email:</strong> dpo@globaldatasysgroup.com</p>
-                <p><strong>General Contact:</strong> info@globaldatasysgroup.com</p>
+                <p><strong>Email:</strong> daniel.brown@dataingo.com</p>
+                <p><strong>General Contact:</strong> projects@dataingo.com</p>
                 <p><strong>Phone:</strong> +1 307 683 8467</p>
-                <p><strong>Address:</strong> 1309 Coffeen Avenue, STE 1200, Sheridan, Wyoming 82801</p>
+                <p><strong>Address:</strong> 16192 Coastal Highway, Lewes, DE 19958 USA</p>
               </div>
 
               <h2 className="text-2xl font-semibold text-foreground mb-4 mt-8">

@@ -148,7 +148,7 @@ const BrochureForm: React.FC = () => {
       </form>
 
       <p className="text-xs text-foreground/60 mt-4 text-center">
-        By downloading our brochure, you agree to receive marketing communications from Global Datasys Group.
+        By downloading our brochure, you agree to receive marketing communications from DataInGo Solutions.
       </p>
     </div>
   );

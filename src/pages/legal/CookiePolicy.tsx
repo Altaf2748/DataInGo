@@ -21,7 +21,7 @@ const CookiePolicy: React.FC = () => {
               </p>
               
               <p className="mb-8">
-                This Cookie Policy explains how Global Datasys Group uses cookies and similar 
+                This Cookie Policy explains how DataInGo Solutions uses cookies and similar 
                 technologies to recognize you when you visit our website.
               </p>
 
@@ -96,7 +96,7 @@ const CookiePolicy: React.FC = () => {
                 If you have any questions about our use of cookies, please contact us:
               </p>
               <div className="bg-accent/20 p-4 rounded-lg">
-                <p><strong>Email:</strong> info@globaldatasysgroup.com</p>
+                <p><strong>Email:</strong> projects@dataingo.com</p>
                 <p><strong>Phone:</strong> +1 307 683 8467</p>
               </div>
 

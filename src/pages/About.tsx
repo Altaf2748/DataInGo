@@ -169,7 +169,7 @@ const About: React.FC = () => {
               <ul className="text-foreground/70 space-y-2 text-left">
                 <li className="flex items-start space-x-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2.5 flex-shrink-0"></div>
-                  <span>Provide 99%+ accurate, verified business data</span>
+                  <span>Provide 98%+ accurate, verified business data</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2.5 flex-shrink-0"></div>

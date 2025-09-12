@@ -10,7 +10,7 @@ const B2BEmailList: React.FC = () => {
     },
     {
       title: "Maximize Efficiency and Drive Results",
-      content: "Stop wasting time on outdated contacts and unresponsive leads. Our B2B email lists are continuously updated and verified through multiple data sources, ensuring 99%+ accuracy rates. With detailed segmentation options including industry, company size, job title, and geographic location, you can create highly targeted campaigns that deliver measurable ROI.",
+      content: "Stop wasting time on outdated contacts and unresponsive leads. Our B2B email lists are continuously updated and verified through multiple data sources, ensuring 98%+ accuracy rates. With detailed segmentation options including industry, company size, job title, and geographic location, you can create highly targeted campaigns that deliver measurable ROI.",
       imagePosition: 'right' as const
     },
     {
@@ -21,7 +21,7 @@ const B2BEmailList: React.FC = () => {
   ];
 
   const features = [
-    "99%+ Email Accuracy Rate",
+    "98%+ Email Accuracy Rate",
     "GDPR & CAN-SPAM Compliant",
     "Real-time Data Verification",
     "Custom Segmentation Options",

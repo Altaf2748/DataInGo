@@ -74,7 +74,7 @@ const defaultReasons: Reason[] = [
 
 const ReasonsGrid: React.FC<ReasonsGridProps> = ({
   title = "Reasons To Choose Us?",
-  subtitle = "Discover why thousands of businesses trust Global Datasys Group for their data and marketing needs.",
+  subtitle = "Discover why thousands of businesses trust DataInGo Solutions for their data and marketing needs.",
   reasons = defaultReasons,
   className = ""
 }) => {
