@@ -25,6 +25,7 @@ const Header: React.FC = () => {
       name: 'Services',
       dropdown: [
         { name: 'B2B Email Lists', href: '/services/b2b-email-list' },
+        { name: 'All Conferences Attendees List', href: '/services/all-conferences-attendees-list' },
         { name: 'Data Enrichment', href: '/services/data-enrichment' },
         { name: 'Digital Marketing', href: '/services/digital-marketing' },
         { name: 'SEO Services', href: '/services/seo' },

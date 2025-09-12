@@ -31,6 +31,15 @@ import Testimonials from "./pages/resources/Testimonials";
 import CaseStudy from "./pages/resources/CaseStudy";
 import Article from "./pages/resources/Article";
 
+// Legal Pages
+import PrivacyPolicy from "./pages/legal/PrivacyPolicy";
+import TermsOfService from "./pages/legal/TermsOfService";
+import CookiePolicy from "./pages/legal/CookiePolicy";
+import GdprCompliance from "./pages/legal/GdprCompliance";
+
+// All Conferences Page
+import AllConferencesAttendeesList from "./pages/services/AllConferencesAttendeesList";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -55,6 +64,7 @@ const App = () => (
           <Route path="/services/b2b-email-list/custom-mail-list" element={<CustomMailList />} />
           
           {/* Other Services */}
+          <Route path="/services/all-conferences-attendees-list" element={<AllConferencesAttendeesList />} />
           <Route path="/services/data-enrichment" element={<DataEnrichment />} />
           <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
           <Route path="/services/seo" element={<SEO />} />
@@ -68,6 +78,12 @@ const App = () => (
           <Route path="/resources/testimonials" element={<Testimonials />} />
           <Route path="/resources/case-study" element={<CaseStudy />} />
           <Route path="/resources/article" element={<Article />} />
+          
+          {/* Legal Pages */}
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/gdpr-compliance" element={<GdprCompliance />} />
           
           {/* Catch-all route */}
           <Route path="*" element={<NotFound />} />

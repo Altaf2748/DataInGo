@@ -21,7 +21,8 @@ const Footer: React.FC = () => {
       { name: "Professionals Email List", href: "/services/b2b-email-list/professionals-email-list" },
       { name: "Industry-Specific Email Lists", href: "/services/b2b-email-list/industry-specific-email-lists" },
       { name: "B2B Sales Email Lists", href: "/services/b2b-email-list/b2b-sales-email-lists" },
-      { name: "Custom Mail List", href: "/services/b2b-email-list/custom-mail-list" }
+      { name: "Custom Mail List", href: "/services/b2b-email-list/custom-mail-list" },
+      { name: "All Conferences Attendees List", href: "/services/all-conferences-attendees-list" }
     ],
     "Data Enrichment Services": [
       { name: "Email Append", href: "/services/data-enrichment/email-append" },
