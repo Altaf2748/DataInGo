@@ -38,8 +38,8 @@ const IndustrySpecificEmailLists: React.FC = () => {
 
   return (
     <ServicePageTemplate
-      title="Industry-Specific Email Lists"
-      subtitle="Targeted lists for manufacturing, finance, retail, and more"
+      title="Connect with Larger Audiences through Industry-Specific Email Lists"
+      subtitle="Our email lists are built to be practical, adaptable, dependable, affordable, and credible empowering you to grow into larger markets. Targeted lists for manufacturing, finance, retail, and more"
       description="Access specialized email lists tailored to specific industries including manufacturing, finance, retail, education, healthcare, and government. Each list is carefully curated with decision-makers who understand your industry's unique challenges."
       contentBlocks={contentBlocks}
       features={features}

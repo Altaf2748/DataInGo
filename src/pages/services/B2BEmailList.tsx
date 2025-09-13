@@ -4,12 +4,12 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 const B2BEmailList: React.FC = () => {
   const contentBlocks = [
     {
-      title: "Unlock Targeted Outreach and Lead Generation",
+      title: "Unlock Precise Targeting and Lead Generation",
       content: "Our B2B email lists provide you with verified, up-to-date contact information for decision-makers across industries. Each list is carefully curated and validated to ensure maximum deliverability and response rates. Whether you're targeting C-level executives, department heads, or specific job functions, our comprehensive databases help you reach the right prospects at the right time.",
       imagePosition: 'left' as const
     },
     {
-      title: "Maximize Efficiency and Drive Results",
+      title: "Accelerate Performance and Deliver Impact",
       content: "Stop wasting time on outdated contacts and unresponsive leads. Our B2B email lists are continuously updated and verified through multiple data sources, ensuring 98%+ accuracy rates. With detailed segmentation options including industry, company size, job title, and geographic location, you can create highly targeted campaigns that deliver measurable ROI.",
       imagePosition: 'right' as const
     },
@@ -39,7 +39,7 @@ const B2BEmailList: React.FC = () => {
     <ServicePageTemplate
       title="B2B Email Lists"
       subtitle="Access verified contact databases across industries and job functions"
-      description="Transform your outreach strategy with our comprehensive B2B email lists. Get direct access to verified decision-makers, department heads, and key stakeholders across every major industry. Our data is continuously updated and validated to ensure maximum deliverability and campaign success."
+      description="At DataInGo Solutions, we specialize in providing businesses with tailored, up-to-date B2B email lists across a wide range of industries. Our comprehensive databases offer key insights, including contact details, company profiles, industry-specific data, and market intelligence. By leveraging our services, organizations gain access to accurate, actionable data that fuels marketing campaigns, sales strategies, market research, and overall business growth. Our data solutions streamline operations and support informed decision-making for success in competitive markets.Transform your outreach strategy with our comprehensive B2B email lists. Get direct access to verified decision-makers, department heads, and key stakeholders across every major industry. Our data is continuously updated and validated to ensure maximum deliverability and campaign success."
       contentBlocks={contentBlocks}
       features={features}
       breadcrumbs={breadcrumbs}

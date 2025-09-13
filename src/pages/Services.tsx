@@ -113,7 +113,29 @@ const Services: React.FC = () => {
           href: "/resources/case-study"
         }}
       />
+      {/* Our Services */}
+      <section className="py-16 md:py-24 bg-accent/20">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-poppins">
+              Our Services
+            </h2>
+            <p className="text-lg text-foreground/70 max-w-3xl mx-auto text-left">
+              In today’s increasingly data-driven world, DataInGo Solutions empowers businesses to overcome challenges, seize growth opportunities, and achieve lasting success. Our mission is to be a global leader in data-driven marketing solutions, providing unmatched accuracy, innovative strategies, and exceptional customer support. By leveraging cutting-edge technology and deep industry expertise, we help organizations navigate change, optimize performance, and make informed decisions that drive sustainable growth. In the dynamic landscape of digital marketing, our commitment to excellence sets the standard for delivering meaningful, measurable results.
+            </p>
+            <br></br>
+            <strong><p className="text-lg text-foreground/90 max-w-9xl mx-auto text-center font-bold">Unlocking Business Potential through Data-Driven Strategies</p></strong>
+            <p className="text-lg text-foreground/70 max-w-3xl mx-auto text-left">At <strong>DataInGo Solutions</strong>, we harness the power of data to help businesses reach their full potential. Our approach focuses on delivering customized, data-driven marketing strategies that not only tackle challenges but also deliver tangible, measurable results. By combining advanced technology with industry expertise, we empower our clients to gain valuable insights, boost customer engagement, and refine their digital marketing efforts. With a commitment to innovation and precision, we tailor every strategy to align with the specific goals of each business, ensuring impactful results when they matter most.</p>
+            <br></br>
+            <strong><p className="text-lg text-foreground/90 max-w-9xl mx-auto text-center font-bold">Achieving Sustainable Success in the Digital Age</p></strong>
+            <p className="text-lg text-foreground/70 max-w-3xl mx-auto text-left">In today’s ever-evolving digital landscape, adaptability is key. DataInGo Solutions supports businesses through constant change, equipping them with the tools they need to stay ahead of the curve. Our commitment to excellence ensures that businesses are not only able to respond to market shifts but also anticipate them. We empower our clients to make informed decisions that foster growth, profitability, and lasting success. With our data solutions, businesses can confidently navigate the complexities of digital marketing and achieve their long-term objectives in a rapidly transforming world.</p>
+          </div>
+      </section>
 
+
+
+
+
+      
       {/* Quick Service Tiles */}
       <TilesGrid 
         title="Choose Your Data Solution"

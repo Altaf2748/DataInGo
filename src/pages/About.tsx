@@ -107,7 +107,7 @@ const About: React.FC = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-poppins">
-              DataInGo Solutions – Your Success Catalyst A Strategic Partner in Your Success
+              DataInGo Solutions – A Strategic Partner in Your Success
             </h2>
             <p className="text-lg text-foreground/70 leading-relaxed mb-8 text-left">
               At DataInGo Solutions, we specialize in delivering end-to-end data solutions and strategic digital marketing services that drive business growth. Our expertise spans across various industries including healthcare, IT, and retail where we partner with clients to craft tailored lead generation and business development strategies.</p>

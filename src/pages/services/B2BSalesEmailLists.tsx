@@ -5,17 +5,22 @@ const B2BSalesEmailLists: React.FC = () => {
   const contentBlocks = [
     {
       title: "Sales-Ready Lead Lists",
-      content: "Get pre-qualified leads that are ready for your sales team to contact. Our B2B sales email lists include prospects who have shown buying intent, have the budget and authority to make purchasing decisions, and match your ideal customer profile.",
+      content: <p>The digital era has transformed marketing strategies, with B2B marketing emerging as one of the most effective approaches. According to a recent word stream survey, B2B campaigns boast higher click-through rates (CTRs) than many other channels. In fact, 59% of leading marketers agree that B2B lists are the most powerful tool for generating revenue.<br></br>
+        It’s evident that B2B marketing is a top priority for businesses today. However, the key to success lies in having access to accurate and reliable B2B contact lists. Many companies waste valuable time and resources sending cold emails to unqualified leads, resulting in poor campaign performance.<br></br>
+        Partnering with DataInGo Solutions eliminates that risk. Our B2B lists are continuously updated and enriched, providing verified and precise data to fuel your marketing efforts. With our pre-validated lists, you can confidently run targeted campaigns and achieve better results, without the common pitfalls.<br></br>
+        </p>,
       imagePosition: 'left' as const
     },
     {
-      title: "Lead Scoring and Qualification",
-      content: "Each lead comes with detailed scoring based on company growth, recent funding, technology adoption, and buying signals. Focus your sales efforts on the highest-potential prospects with our advanced lead qualification and scoring methodology.",
+      title: "Expand your Global Reach",
+      content: <p>Unlock new growth opportunities by connecting with the right audience worldwide through DataInGo Solutions’ comprehensive leads database. Whether you're focusing on specific countries, industries, or job roles, we provide tailored data solutions to help you engage the prospects that matter most to your business.<br></br>Our database offers access to accurate, regularly updated contact information across a wide range of sectors including healthcare, technology, finance, manufacturing, and more. This enables you to launch highly targeted marketing campaigns that reach decision-makers and key professionals with precision.<br></br>With DataInGo Solutions, you don’t just reach more people you reach the right people. Our verified, data-driven leads empower you to improve campaign performance, reduce waste, and accelerate business growth. Start targeting your ideal markets today and turn data into results.</p>,
       imagePosition: 'right' as const
     },
     {
-      title: "CRM Integration and Sales Intelligence",
-      content: "Seamlessly import leads into your CRM system with our standardized data formats. Each contact includes company insights, recent news, technology stack, and other sales intelligence to help your team personalize their outreach and increase conversion rates.",
+      title: "Reach the Right Audience with Focused Lead Generation Strategies",
+      content: <p><strong>Connect with the Right Prospects Worldwide Using DataInGo Solutions' Comprehensive Leads Database</strong><br></br>
+      DataInGo Solutions empowers your business to reach ideal prospects across the globe with precision. Whether you're targeting specific industries, countries, or job roles, our customized data solutions support highly focused marketing campaigns that generate real results.<br></br>
+      With access to accurate, up-to-date contact information across key sectors—such as healthcare, finance, technology, and manufacturing—you can engage with the decision-makers who matter most to your business. Our database ensures your outreach is both efficient and impactful, helping you build strong connections, increase conversions, and drive sustainable growth through reliable, data-driven leads.<br></br></p>,
       imagePosition: 'left' as const
     }
   ];
@@ -39,8 +44,8 @@ const B2BSalesEmailLists: React.FC = () => {
   return (
     <ServicePageTemplate
       title="B2B Sales Email Lists"
-      subtitle="High-quality leads ready for your sales team to convert"
-      description="Accelerate your sales process with pre-qualified B2B leads. Our sales email lists include prospects with verified buying intent, decision-making authority, and budget allocation, giving your sales team the best chance of conversion success."
+      subtitle="Maintain a Strategic Advantage with Trusted B2B Contact Intelligence & High-quality leads ready for your sales team to convert"
+      description="Access a database of over 80 million verified business executives, including senior decision-makers in the U.S. Expand your reach into global markets with premium B2B leads designed to deliver measurable results. Accelerate your sales process with pre-qualified B2B leads. Our sales email lists include prospects with verified buying intent, decision-making authority, and budget allocation, giving your sales team the best chance of conversion success."
       contentBlocks={contentBlocks}
       features={features}
       breadcrumbs={breadcrumbs}

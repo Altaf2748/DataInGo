@@ -39,8 +39,8 @@ const CustomMailList: React.FC = () => {
   return (
     <ServicePageTemplate
       title="Custom Mail List"
-      subtitle="Personalized lists built according to your specific requirements"
-      description="Get precisely targeted email lists created to match your unique business requirements. Our custom mail list service provides dedicated research and filtering to deliver exactly the prospects you need to reach your marketing and sales goals."
+      subtitle="Maximize Your Marketing Impact Using a Personalized Mailing List. Personalized lists built according to your specific requirements"
+      description="Connect with your ideal audience, enhance campaign performance, and achieve impactful results using customized customer mailing lists from DataInGo Solutions. Get precisely targeted email lists created to match your unique business requirements. Our custom mail list service provides dedicated research and filtering to deliver exactly the prospects you need to reach your marketing and sales goals."
       contentBlocks={contentBlocks}
       features={features}
       breadcrumbs={breadcrumbs}
