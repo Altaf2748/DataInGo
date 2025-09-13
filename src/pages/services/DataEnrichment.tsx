@@ -38,8 +38,8 @@ const DataEnrichment: React.FC = () => {
   return (
     <ServicePageTemplate
       title="Data Enrichment Services"
-      subtitle="Transform your existing data into valuable business assets"
-      description="Enhance your customer and prospect databases with our comprehensive data enrichment services. We fill missing information, verify accuracy, and add valuable insights to help you make better business decisions and improve campaign performance."
+      subtitle="Maximize the impact of your data with comprehensive data enrichment.)  (Advantages of Data Enrichment & Transform your existing data into valuable business assets"
+      description="DataInGo Solutions data enrichment services deliver critical insights that empower marketing, sales, and business leaders to make smarter decisions. By enhancing your data with detailed segmentation—covering technology usage, company specifics, and industry trends—we provide a deeper, more comprehensive understanding of your audience. Our enrichment includes psychographic profiling and geo-tagging, allowing precise targeting and location-based lead sorting. This holistic approach transforms your data into a powerful asset that drives improved outcomes across all your business strategies. Enhance your customer and prospect databases with our comprehensive data enrichment services. We fill missing information, verify accuracy, and add valuable insights to help you make better business decisions and improve campaign performance."
       contentBlocks={contentBlocks}
       features={features}
       breadcrumbs={breadcrumbs}
