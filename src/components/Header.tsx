@@ -23,6 +23,7 @@ const Header: React.FC = () => {
     { name: 'About', href: '/about' },
     { 
       name: 'Services',
+      href: '/services',
       dropdown: [
         { name: 'B2B Email Lists', href: '/services/b2b-email-list' },
         { name: 'All Conferences Attendees List', href: '/services/all-conferences-attendees-list' },
@@ -34,6 +35,7 @@ const Header: React.FC = () => {
     },
     {
       name: 'Resources',
+      href: '/resources',
       dropdown: [
         { name: 'Blog', href: '/resources/blog' },
         { name: 'Brochure', href: '/resources/brochure' },
@@ -80,7 +82,8 @@ const Header: React.FC = () => {
               <div key={item.name} className="relative group">
                 {item.dropdown ? (
                   <div className="relative">
-                    <button
+                    <Link
+                      to={item.href || '#'}
                       className={`nav-link flex items-center space-x-1 py-2 ${
                         item.dropdown.some(dropItem => isActiveRoute(dropItem.href)) 
                           ? 'text-nav-hover' 
@@ -91,7 +94,7 @@ const Header: React.FC = () => {
                     >
                       <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
-                    </button>
+                    </Link>
                     
                     {openDropdown === item.name && (
                       <div 
@@ -160,7 +163,8 @@ const Header: React.FC = () => {
                 <div key={item.name}>
                   {item.dropdown ? (
                     <div>
-                      <button
+                      <Link
+                        to={item.href || '#'}
                         className="flex items-center justify-between w-full px-4 py-3 text-left text-nav-text hover:bg-accent rounded-md transition-colors"
                         onClick={() => handleDropdownToggle(item.name)}
                       >
@@ -170,7 +174,7 @@ const Header: React.FC = () => {
                             openDropdown === item.name ? 'rotate-180' : ''
                           }`} 
                         />
-                      </button>
+                      </Link>
                       
                       {openDropdown === item.name && (
                         <div className="ml-4 mt-2 space-y-1">
