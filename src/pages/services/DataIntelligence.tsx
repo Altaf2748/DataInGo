@@ -39,7 +39,7 @@ const DataIntelligence: React.FC = () => {
   return (
     <ServicePageTemplate
       title="Data Intelligence Services"
-      subtitle="Transform data into actionable business intelligence and intent insights"
+      subtitle="Maximize the Power of Data Insights. Transform data into actionable business intelligence and intent insights"
       description="Unlock the power of your data with advanced intelligence services that reveal buying intent, competitive insights, and predictive analytics. Make data-driven decisions and identify high-value opportunities with our AI-powered intelligence platform."
       contentBlocks={contentBlocks}
       features={features}

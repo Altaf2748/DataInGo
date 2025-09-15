@@ -4,20 +4,30 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 const DataVerification: React.FC = () => {
   const contentBlocks = [
     {
-      title: "Multi-Step Email & Contact Verification",
-      content: "Ensure your contact database accuracy with our comprehensive verification process. We validate email addresses through SMTP checks, domain verification, bounce detection, and deliverability testing to maintain high-quality contact lists.",
+      title: "Guaranteeing Data Integrity with Our Verification Services",
+      content: "Accurate and current data is crucial for maximizing the impact of your marketing strategies and business processes. At DataInGo Solutions, our thorough data verification services guarantee that your contact lists remain precise and free from errors. By cross-checking your data with trusted sources, we remove outdated or duplicate entries, resulting in a streamlined and more effective list. This ensures improved email deliverability, so your campaigns reach the right audience and avoid issues like bounced emails or wasted efforts.",
       imagePosition: 'left' as const
     },
     {
-      title: "Real-Time Data Quality Assessment",
-      content: "Our verification system provides detailed accuracy reports including email validity status, phone number verification, address standardization, and data completeness scores. Identify and flag risky contacts before campaign launches.",
+      title: "Maximizing Campaign Performance and ROI",
+      content: "The effectiveness of your email campaigns hinges on the accuracy of your contact list. Email verification ensures that the addresses in your list are valid and active, helping you avoid issues like deliverability problems and a tarnished sender reputation. By verifying your emails, you ensure they are accurate and trustworthy, so your messages reach the right audience without any obstacles.",
       imagePosition: 'right' as const
     },
     {
-      title: "Compliance & Deliverability Optimization",
-      content: "Improve email deliverability rates and maintain sender reputation by removing invalid, inactive, and high-risk email addresses. Our verification process helps you stay compliant with anti-spam regulations and achieve better campaign performance.",
+      title: "Email Verification",
+      content: "The effectiveness of your email campaigns hinges on the accuracy of your contact list. Email verification ensures that the addresses in your list are valid and active, helping you avoid issues like deliverability problems and a tarnished sender reputation. By verifying your emails, you ensure they are accurate and trustworthy, so your messages reach the right audience without any obstacles.",
       imagePosition: 'left' as const
-    }
+    },
+    {
+      title: "Tele Verification",
+      content: "Each incorrect contact can harm your business. Our phone verification service cleans and updates your database by detecting and correcting any inconsistencies in your contact information. We employ a comprehensive process to remove outdated or inactive entries, ensuring your database remains accurate and optimized for effective outreach. This leads to improved communication with potential leads and minimizes wasted efforts.",
+      imagePosition: 'right' as const
+    },
+    {
+      title: "Social Verification",
+      content: "We validate the company names and job titles of contacts in your database by cross-checking them across multiple social media and online platforms. This ensures you're connecting with the right individuals in the appropriate roles. Our social verification services enhance your telemarketing and follow-up efforts, boosting your engagement with the most relevant prospects.",
+      imagePosition: 'left' as const
+    },
   ];
 
   const features = [

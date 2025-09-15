@@ -4,13 +4,13 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 const DataProfiling: React.FC = () => {
   const contentBlocks = [
     {
-      title: "Comprehensive Database Analysis & Insights",
-      content: "Discover the true state of your database with detailed profiling reports. Our data profiling service analyzes completeness, accuracy, consistency, and uniqueness across all data fields to provide actionable insights for database optimization.",
+      title: "Optimizing Your Database for More Effective Campaigns",
+      content: "At DataInGo Solutions, we recognize the value of having clean, organized data. Our robust data profiling services go beyond just eliminating duplicates—they also address data format inconsistencies and enrich your database with essential insights. By ensuring your contact information is accurate and current, we help maximize the effectiveness of your marketing campaigns. With a combination of manual and automated verification, we maintain the accuracy and reliability of your data, driving higher success rates.",
       imagePosition: 'left' as const
     },
     {
-      title: "Data Quality Scoring & Recommendations",
-      content: "Receive detailed quality scores and recommendations for each data field. Our profiling reports include distribution charts, pattern analysis, and specific suggestions for improving data quality and campaign performance.",
+      title: "Enhancing Efficiency and ROI with Reliable Data",
+      content: "Effective data profiling transforms your marketing strategy by ensuring your database is not only clean but enriched with valuable insights. Our team goes beyond basic data cleaning to enhance your contact records, helping you target the right audience with precision. With a well-organized and normalized database, you can optimize your outreach efforts, minimize wasted resources, and focus on high-potential leads. Partnering with DataInGo Solutions means gaining access to data-driven marketing tools that improve engagement, boost ROI, and accelerate business growth. Contact us today to start optimizing your data!",
       imagePosition: 'right' as const
     },
     {
@@ -39,8 +39,8 @@ const DataProfiling: React.FC = () => {
   return (
     <ServicePageTemplate
       title="Data Profiling Services"
-      subtitle="Analyze and understand your database quality with detailed profiling reports"
-      description="Gain deep insights into your database quality and composition with our comprehensive data profiling services. We analyze your data to identify patterns, quality issues, and opportunities for optimization."
+      subtitle="Enhance Your Insight into Prospects with Data Profiling, Analyze and understand your database quality with detailed profiling reports"
+      description="Streamline your database to uncover distinct data profiles and execute focused campaigns. Identify key buyer segments with our Data Profiling services. Gain deep insights into your database quality and composition with our comprehensive data profiling services. We analyze your data to identify patterns, quality issues, and opportunities for optimization."
       contentBlocks={contentBlocks}
       features={features}
       breadcrumbs={breadcrumbs}
