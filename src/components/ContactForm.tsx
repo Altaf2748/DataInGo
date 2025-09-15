@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { submitFormToDatabase } from '@/lib/formSubmission';
+import { supabase } from "@/integrations/supabase/client";
 
 interface FormData {
   name: string;
@@ -118,40 +120,54 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          company: formData.company,
-          email: formData.email,
-          phone: formData.phone,
-          requirements: formData.requirements,
-          timestamp: new Date().toISOString()
-        }),
+      // Submit to database
+      const dbResult = await submitFormToDatabase({
+        form_type: 'contact',
+        full_name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        requirements: formData.requirements,
+        ip_address: undefined, // Will be handled by server
+        user_agent: navigator.userAgent
       });
 
-      if (response.ok) {
-        setIsSubmitted(true);
-        toast({
-          title: "Message Sent Successfully!",
-          description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
-        });
-        
-        // Reset form
-        setFormData({
-          name: '',
-          company: '',
-          email: '',
-          phone: '',
-          requirements: '',
-          hp: ''
-        });
-      } else {
-        throw new Error('Submission failed');
+      if (!dbResult.success) {
+        throw new Error('Failed to save to database');
       }
+
+      // Send email via edge function
+      const { error: emailError } = await supabase.functions.invoke('send-form-email', {
+        body: {
+          formType: 'Contact Form',
+          fullName: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          requirements: formData.requirements
+        }
+      });
+
+      if (emailError) {
+        console.error('Email sending error:', emailError);
+        // Don't throw error - form was saved to database
+      }
+
+      setIsSubmitted(true);
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+      });
+        
+      // Reset form
+      setFormData({
+        name: '',
+        company: '',
+        email: '',
+        phone: '',
+        requirements: '',
+        hp: ''
+      });
     } catch (error) {
       console.error('Form submission error:', error);
       toast({

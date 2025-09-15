@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Loader2 } from 'lucide-react';
+import { submitFormToDatabase } from '@/lib/formSubmission';
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 interface FormData {
   fullName: string;
@@ -20,6 +23,7 @@ interface FormErrors {
 
 const AllConferencesForm: React.FC = () => {
   const [searchParams] = useSearchParams();
+  const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
@@ -69,33 +73,70 @@ const AllConferencesForm: React.FC = () => {
     
     if (!validateForm()) return;
 
+    // Honeypot check
+    if (formData.hp) {
+      console.log('Bot submission detected');
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitError(null);
 
     try {
-      const response = await fetch('/api/all-conferences-request', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      // Submit to database
+      const dbResult = await submitFormToDatabase({
+        form_type: 'all_conferences',
+        full_name: formData.fullName,
+        email: formData.businessEmail,
+        phone: formData.phoneNumber,
+        requirements: formData.requirements,
+        category: searchParams.get('category') || undefined,
+        ip_address: undefined, // Will be handled by server
+        user_agent: navigator.userAgent
       });
 
-      if (response.ok) {
-        setSubmitSuccess(true);
-        setFormData({
-          fullName: '',
-          phoneNumber: '',
-          businessEmail: '',
-          requirements: '',
-          hp: ''
-        });
-      } else {
-        const errorData = await response.json();
-        setSubmitError(errorData.message || 'Something went wrong. Please try again.');
+      if (!dbResult.success) {
+        throw new Error('Failed to save to database');
       }
+
+      // Send email via edge function
+      const { error: emailError } = await supabase.functions.invoke('send-form-email', {
+        body: {
+          formType: 'All Conferences Request',
+          fullName: formData.fullName,
+          email: formData.businessEmail,
+          phone: formData.phoneNumber,
+          requirements: formData.requirements,
+          category: searchParams.get('category')
+        }
+      });
+
+      if (emailError) {
+        console.error('Email sending error:', emailError);
+        // Don't throw error - form was saved to database
+      }
+
+      setSubmitSuccess(true);
+      toast({
+        title: "Success!",
+        description: "Thank you for your requirements submission. We will get back to you soon.",
+      });
+      
+      setFormData({
+        fullName: '',
+        phoneNumber: '',
+        businessEmail: '',
+        requirements: '',
+        hp: ''
+      });
     } catch (error) {
+      console.error('All conferences form error:', error);
       setSubmitError('Network error. Please check your connection and try again.');
+      toast({
+        title: "Error",
+        description: "Failed to send your requirements. Please try again later.",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }
