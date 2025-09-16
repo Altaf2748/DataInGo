@@ -8,6 +8,7 @@ import ServiceFAQs from '@/components/ServiceFAQs';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight } from 'lucide-react';
+import { serviceFAQs } from '@/data/serviceFAQs';
 
 interface ContentBlock {
   title: string;
@@ -167,7 +168,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
       {faqKey && serviceName && (
         <ServiceFAQs 
           serviceName={serviceName}
-          faqs={require('@/data/serviceFAQs').serviceFAQs[faqKey] || []}
+          faqs={serviceFAQs[faqKey] || []}
         />
       )}
 
