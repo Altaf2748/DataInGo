@@ -43,6 +43,8 @@ const SEO: React.FC = () => {
       contentBlocks={contentBlocks}
       features={features}
       breadcrumbs={breadcrumbs}
+      faqKey="seo-services"
+      serviceName="SEO Services"
     />
   );
 };

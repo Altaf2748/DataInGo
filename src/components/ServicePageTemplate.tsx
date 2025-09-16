@@ -4,6 +4,7 @@ import Hero from '@/components/Hero';
 import TilesGrid from '@/components/TilesGrid';
 import ProcessFlow from '@/components/ProcessFlow';
 import ReasonsGrid from '@/components/ReasonsGrid';
+import ServiceFAQs from '@/components/ServiceFAQs';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight } from 'lucide-react';
@@ -24,6 +25,8 @@ interface ServicePageTemplateProps {
   showTiles?: boolean;
   showProcess?: boolean;
   showReasons?: boolean;
+  faqKey?: string;
+  serviceName?: string;
 }
 
 const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
@@ -35,7 +38,9 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   breadcrumbs,
   showTiles = true,
   showProcess = true,
-  showReasons = true
+  showReasons = true,
+  faqKey,
+  serviceName
 }) => {
   return (
     <div className="min-h-screen bg-background">
@@ -157,6 +162,14 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
 
       {/* Reasons to Choose Us */}
       {showReasons && <ReasonsGrid />}
+
+      {/* FAQ Section */}
+      {faqKey && serviceName && (
+        <ServiceFAQs 
+          serviceName={serviceName}
+          faqs={require('@/data/serviceFAQs').serviceFAQs[faqKey] || []}
+        />
+      )}
 
       {/* Final CTA */}
       <section className="section-dark py-16 md:py-24">

@@ -43,6 +43,8 @@ const B2BEmailList: React.FC = () => {
       contentBlocks={contentBlocks}
       features={features}
       breadcrumbs={breadcrumbs}
+      faqKey="b2b-email-lists"
+      serviceName="B2B Email Lists"
     />
   );
 };

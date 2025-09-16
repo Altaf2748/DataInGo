@@ -15,6 +15,10 @@ import {
   Users,
   TrendingUp
 } from 'lucide-react';
+import servicesDataAnalytics from '@/assets/services-data-analytics.jpg';
+import servicesDigitalMarketing from '@/assets/services-digital-marketing.jpg';
+import servicesWebDevelopment from '@/assets/services-web-development.jpg';
+import servicesSEO from '@/assets/services-seo.jpg';
 
 const Services: React.FC = () => {
   const serviceCategories = [
@@ -23,6 +27,7 @@ const Services: React.FC = () => {
       description: "Comprehensive databases of verified business contacts across industries and job functions.",
       icon: Mail,
       href: "/services/b2b-email-list",
+      image: servicesDataAnalytics,
       features: ["98%+ Accuracy Rate", "GDPR Compliant", "Real-time Verification", "Custom Segmentation"],
       subServices: [
         "Technology Email Lists",
@@ -38,6 +43,7 @@ const Services: React.FC = () => {
       description: "Transform your existing data into valuable business assets with our enrichment services.",
       icon: Database,
       href: "/services/data-enrichment",
+      image: servicesDataAnalytics,
       features: ["Data Validation", "Missing Field Population", "Quality Scoring", "Duplicate Removal"],
       subServices: [
         "Email Append",
@@ -53,6 +59,7 @@ const Services: React.FC = () => {
       description: "Comprehensive digital marketing services to maximize your reach and engagement.",
       icon: Megaphone,
       href: "/services/digital-marketing",
+      image: servicesDigitalMarketing,
       features: ["Multi-channel Campaigns", "Performance Tracking", "A/B Testing", "ROI Optimization"],
       subServices: [
         "Email Campaigns",
@@ -68,6 +75,7 @@ const Services: React.FC = () => {
       description: "Improve your search engine visibility and drive organic traffic to your website.",
       icon: Search,
       href: "/services/seo",
+      image: servicesSEO,
       features: ["Keyword Research", "Technical Audits", "Content Optimization", "Link Building"],
       subServices: [
         "On-Page SEO",
@@ -83,6 +91,7 @@ const Services: React.FC = () => {
       description: "Modern, responsive websites that convert visitors into customers.",
       icon: Globe,
       href: "/services/website-design-development",
+      image: servicesWebDevelopment,
       features: ["Responsive Design", "SEO Optimized", "Fast Loading", "User-Focused"],
       subServices: [
         "Custom Website Design",
@@ -230,24 +239,35 @@ const Services: React.FC = () => {
 
                   {/* Visual */}
                   <div className={isReversed ? 'lg:order-1' : 'lg:order-2'}>
-                    <div className="bg-gradient-primary rounded-2xl p-8 md:p-12 text-hero-text">
-                      <div className="text-center">
-                        <IconComponent className="w-24 h-24 mx-auto mb-6 opacity-80" />
-                        <h4 className="text-xl font-semibold mb-4">
-                          Why Choose Our {category.title}?
-                        </h4>
-                        <div className="grid grid-cols-1 gap-4 text-sm">
-                          <div className="flex items-center justify-center space-x-2">
-                            <Users className="w-4 h-4" />
-                            <span>2000+ Happy Clients</span>
+                    <div className="relative overflow-hidden rounded-2xl aspect-[4/3]">
+                      <img 
+                        src={category.image}
+                        alt={`${category.title} services visualization`}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
+                        <div className="absolute bottom-6 left-6 right-6 text-white">
+                          <div className="flex items-center space-x-3 mb-4">
+                            <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
+                              <IconComponent className="w-6 h-6" />
+                            </div>
+                            <h4 className="text-lg font-semibold">
+                              {category.title}
+                            </h4>
                           </div>
-                          <div className="flex items-center justify-center space-x-2">
-                            <TrendingUp className="w-4 h-4" />
-                            <span>300% Average ROI Increase</span>
-                          </div>
-                          <div className="flex items-center justify-center space-x-2">
-                            <CheckCircle className="w-4 h-4" />
-                            <span>98%+ Data Accuracy</span>
+                          <div className="grid grid-cols-1 gap-2 text-sm">
+                            <div className="flex items-center space-x-2">
+                              <Users className="w-4 h-4" />
+                              <span>2000+ Happy Clients</span>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                              <TrendingUp className="w-4 h-4" />
+                              <span>300% Average ROI Increase</span>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                              <CheckCircle className="w-4 h-4" />
+                              <span>98%+ Data Accuracy</span>
+                            </div>
                           </div>
                         </div>
                       </div>
