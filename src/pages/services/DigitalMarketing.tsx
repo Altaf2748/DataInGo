@@ -43,6 +43,8 @@ const DigitalMarketing: React.FC = () => {
       contentBlocks={contentBlocks}
       features={features}
       breadcrumbs={breadcrumbs}
+      faqKey="digital-marketing"
+      serviceName="Digital Marketing"
     />
   );
 };

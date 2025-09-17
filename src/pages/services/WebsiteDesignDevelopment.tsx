@@ -43,6 +43,8 @@ const WebsiteDesignDevelopment: React.FC = () => {
       contentBlocks={contentBlocks}
       features={features}
       breadcrumbs={breadcrumbs}
+      faqKey="website-design-development"
+      serviceName="Website Design & Development"
     />
   );
 };
