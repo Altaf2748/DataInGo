@@ -19,6 +19,11 @@ import servicesDataAnalytics from '@/assets/services-data-analytics.jpg';
 import servicesDigitalMarketing from '@/assets/services-digital-marketing.jpg';
 import servicesWebDevelopment from '@/assets/services-web-development.jpg';
 import servicesSEO from '@/assets/services-seo.jpg';
+import homeBusinessGrowth from '@/assets/home-business-growth.jpg';
+import homeDataAnalytics from '@/assets/home-data-analytics.jpg';
+import homeDigitalMarketingHub from '@/assets/home-digital-marketing-hub.jpg';
+import homeTechnologyInnovation from '@/assets/home-technology-innovation.jpg';
+import homeEmailMarketing from '@/assets/home-email-marketing.jpg';
 
 const Services: React.FC = () => {
   const serviceCategories = [
@@ -110,34 +115,55 @@ const Services: React.FC = () => {
       <Header />
 
       {/* Hero Section */}
-      <Hero 
-        title="Powering Your Outreach with Verified Audience Email Lists"
-        subtitle="Discover comprehensive data solutions and digital marketing services designed to connect your business with the right prospects at the right time."
-        primaryCTA={{
-          text: "CONTACT US NOW",
-          href: "/contact"
-        }}
-        secondaryCTA={{
-          text: "View Our Work",
-          href: "/resources/case-study"
-        }}
-      />
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={homeTechnologyInnovation}
+            alt="Technology and innovation background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
+        </div>
+        <div className="relative z-10">
+          <Hero 
+            title="Powering Your Outreach with Verified Audience Email Lists"
+            subtitle="Discover comprehensive data solutions and digital marketing services designed to connect your business with the right prospects at the right time."
+            primaryCTA={{
+              text: "CONTACT US NOW",
+              href: "/contact"
+            }}
+            secondaryCTA={{
+              text: "View Our Work",
+              href: "/resources/case-study"
+            }}
+          />
+        </div>
+      </div>
       {/* Our Services */}
-      <section className="py-16 md:py-24 bg-accent/20">
+      <section className="relative py-16 md:py-24 bg-accent/20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={homeDataAnalytics}
+            alt="Data analytics background"
+            className="w-full h-full object-cover opacity-10"
+          />
+        </div>
+        <div className="relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-poppins">
               Our Services
             </h2>
             <p className="text-lg text-foreground/70 max-w-3xl mx-auto text-left">
-              In today’s increasingly data-driven world, DataInGo Solutions empowers businesses to overcome challenges, seize growth opportunities, and achieve lasting success. Our mission is to be a global leader in data-driven marketing solutions, providing unmatched accuracy, innovative strategies, and exceptional customer support. By leveraging cutting-edge technology and deep industry expertise, we help organizations navigate change, optimize performance, and make informed decisions that drive sustainable growth. In the dynamic landscape of digital marketing, our commitment to excellence sets the standard for delivering meaningful, measurable results.
+              In today's increasingly data-driven world, DataInGo Solutions empowers businesses to overcome challenges, seize growth opportunities, and achieve lasting success. Our mission is to be a global leader in data-driven marketing solutions, providing unmatched accuracy, innovative strategies, and exceptional customer support. By leveraging cutting-edge technology and deep industry expertise, we help organizations navigate change, optimize performance, and make informed decisions that drive sustainable growth. In the dynamic landscape of digital marketing, our commitment to excellence sets the standard for delivering meaningful, measurable results.
             </p>
             <br></br>
             <strong><p className="text-lg text-foreground/90 max-w-9xl mx-auto text-center font-bold">Unlocking Business Potential through Data-Driven Strategies</p></strong>
             <p className="text-lg text-foreground/70 max-w-3xl mx-auto text-left">At <strong>DataInGo Solutions</strong>, we harness the power of data to help businesses reach their full potential. Our approach focuses on delivering customized, data-driven marketing strategies that not only tackle challenges but also deliver tangible, measurable results. By combining advanced technology with industry expertise, we empower our clients to gain valuable insights, boost customer engagement, and refine their digital marketing efforts. With a commitment to innovation and precision, we tailor every strategy to align with the specific goals of each business, ensuring impactful results when they matter most.</p>
             <br></br>
             <strong><p className="text-lg text-foreground/90 max-w-9xl mx-auto text-center font-bold">Achieving Sustainable Success in the Digital Age</p></strong>
-            <p className="text-lg text-foreground/70 max-w-3xl mx-auto text-left">In today’s ever-evolving digital landscape, adaptability is key. DataInGo Solutions supports businesses through constant change, equipping them with the tools they need to stay ahead of the curve. Our commitment to excellence ensures that businesses are not only able to respond to market shifts but also anticipate them. We empower our clients to make informed decisions that foster growth, profitability, and lasting success. With our data solutions, businesses can confidently navigate the complexities of digital marketing and achieve their long-term objectives in a rapidly transforming world.</p>
+            <p className="text-lg text-foreground/70 max-w-3xl mx-auto text-left">In today's ever-evolving digital landscape, adaptability is key. DataInGo Solutions supports businesses through constant change, equipping them with the tools they need to stay ahead of the curve. Our commitment to excellence ensures that businesses are not only able to respond to market shifts but also anticipate them. We empower our clients to make informed decisions that foster growth, profitability, and lasting success. With our data solutions, businesses can confidently navigate the complexities of digital marketing and achieve their long-term objectives in a rapidly transforming world.</p>
           </div>
+        </div>
       </section>
 
 
@@ -294,9 +320,19 @@ const Services: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-8 h-8 text-hero-text" />
+            <div className="relative text-center group">
+              <div className="relative overflow-hidden rounded-2xl mb-6">
+                <img 
+                  src={homeBusinessGrowth}
+                  alt="Proven results and business growth"
+                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute top-4 left-4">
+                  <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center">
+                    <CheckCircle className="w-8 h-8 text-hero-text" />
+                  </div>
+                </div>
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-4 font-poppins">
                 Proven Results
@@ -307,9 +343,19 @@ const Services: React.FC = () => {
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-hero-text" />
+            <div className="relative text-center group">
+              <div className="relative overflow-hidden rounded-2xl mb-6">
+                <img 
+                  src={homeDigitalMarketingHub}
+                  alt="Expert team and digital marketing expertise"
+                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute top-4 left-4">
+                  <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center">
+                    <Users className="w-8 h-8 text-hero-text" />
+                  </div>
+                </div>
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-4 font-poppins">
                 Expert Team
@@ -320,9 +366,19 @@ const Services: React.FC = () => {
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="w-8 h-8 text-hero-text" />
+            <div className="relative text-center group">
+              <div className="relative overflow-hidden rounded-2xl mb-6">
+                <img 
+                  src={homeTechnologyInnovation}
+                  alt="Scalable solutions and technology innovation"
+                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute top-4 left-4">
+                  <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center">
+                    <TrendingUp className="w-8 h-8 text-hero-text" />
+                  </div>
+                </div>
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-4 font-poppins">
                 Scalable Solutions
@@ -337,8 +393,16 @@ const Services: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-dark py-16 md:py-24">
-        <div className="container-custom text-center">
+      <section className="relative section-dark py-16 md:py-24 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={homeEmailMarketing}
+            alt="Email marketing and business transformation"
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/60"></div>
+        </div>
+        <div className="container-custom text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary-dark-foreground mb-6 font-poppins">
             Ready to Transform Your Business?
           </h2>
