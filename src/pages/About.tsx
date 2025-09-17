@@ -19,42 +19,58 @@ import {
   Shield
 } from 'lucide-react';
 
+// Team member images
+import johnKennedyImg from '@/assets/team-john-kennedy.jpg';
+import mikeSolomonImg from '@/assets/team-mike-solomon.jpg';
+import miaMillerImg from '@/assets/team-mia-miller.jpg';
+import patWadeImg from '@/assets/team-pat-wade.jpg';
+import gopalKumarImg from '@/assets/team-gopal-kumar.jpg';
+import mohammadAyanImg from '@/assets/team-mohammad-ayan.jpg';
+import ishaEdwardsImg from '@/assets/team-isha-edwards.jpg';
+
+// Section images
+import teamCollaborationImg from '@/assets/about-team-collaboration.jpg';
+import dataCenterImg from '@/assets/about-data-center.jpg';
+import officeWorkspaceImg from '@/assets/about-office-workspace.jpg';
+import clientMeetingImg from '@/assets/about-client-meeting.jpg';
+import companyCultureImg from '@/assets/about-company-culture.jpg';
+
 const About: React.FC = () => {
   const leadership = [
     {
       name: "John Kennedy",
       role: "CEO",
-      image: "",
+      image: johnKennedyImg,
       description: "15+ years in B2B data solutions"
     },
     {
       name: "Mike Solomon", 
       role: "VP of Sales",
-      image: "",
+      image: mikeSolomonImg,
       description: "Expert in Sales and compliance"
     },
     {
       name: "Mia Miller", 
       role: "VP of Data Operations",
-      image: "",
+      image: miaMillerImg,
       description: "Expert in data quality and compliance"
     },
     {
       name: "Pat Wade",
       role: "Head of Digital Marketing",
-      image: "",
+      image: patWadeImg,
       description: "Specializes in performance marketing"
     },
-        {
+    {
       name: "Gopal Kumar", 
       role: "Sr. Director of Business Development",
-      image: "",
+      image: gopalKumarImg,
       description: "Expert in Business Growth Strategies"
     },
     {
       name: "Mohammad Ayan", 
       role: "Director of Business Development",
-      image: "",
+      image: mohammadAyanImg,
       description: "Expert in solving Client demands"
     },
     {
@@ -78,7 +94,7 @@ const About: React.FC = () => {
     {
       name: "Isha Edwards",
       role: "Customer Success Director", 
-      image: "",
+      image: ishaEdwardsImg,
       description: "Focused on client satisfaction and growth"
     }
   ];
@@ -103,8 +119,11 @@ const About: React.FC = () => {
       />
 
       {/* Company Introduction */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container-custom">
+      <section className="py-16 md:py-24 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img src={teamCollaborationImg} alt="Team collaboration" className="w-full h-full object-cover" />
+        </div>
+        <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 font-poppins">
               DataInGo Solutions – A Strategic Partner in Your Success
@@ -125,8 +144,11 @@ const About: React.FC = () => {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-16 md:py-24 bg-accent/20">
-        <div className="container-custom">
+      <section className="py-16 md:py-24 bg-accent/20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <img src={dataCenterImg} alt="Data center technology" className="w-full h-full object-cover" />
+        </div>
+        <div className="container-custom relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Our Vision */}
             <div className="text-center lg:text-left">
@@ -185,6 +207,25 @@ const About: React.FC = () => {
         </div>
       </section>
 
+      {/* Office Workspace Image */}
+      <section className="py-16 bg-background">
+        <div className="container-custom">
+          <div className="relative h-96 rounded-2xl overflow-hidden mb-16">
+            <img src={officeWorkspaceImg} alt="Modern office workspace" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent flex items-center">
+              <div className="container-custom">
+                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Where Innovation Meets Excellence
+                </h3>
+                <p className="text-xl text-white/90 max-w-2xl">
+                  Our state-of-the-art facilities foster collaboration and drive results for our clients worldwide.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Leadership Team */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container-custom">
@@ -201,11 +242,17 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {leadership.map((leader, index) => (
               <div key={index} className="card-elevated p-6 text-center">
-                <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-hero-text font-bold text-2xl">
-                    {leader.name.split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
+                {leader.image ? (
+                  <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+                    <img src={leader.image} alt={leader.name} className="w-full h-full object-cover" />
+                  </div>
+                ) : (
+                  <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-hero-text font-bold text-2xl">
+                      {leader.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                )}
                 <h3 className="text-xl font-semibold text-foreground mb-2 font-poppins">
                   {leader.name}
                 </h3>
@@ -233,9 +280,31 @@ const About: React.FC = () => {
         subtitle="Discover what sets DataInGo Solutions apart in the competitive world of B2B data and digital marketing."
       />
 
-      {/* Company Stats */}
-      <section className="section-dark py-16 md:py-24">
+      {/* Client Meeting Image */}
+      <section className="py-16 bg-accent/10">
         <div className="container-custom">
+          <div className="relative h-96 rounded-2xl overflow-hidden">
+            <img src={clientMeetingImg} alt="Client meeting and collaboration" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-l from-secondary/80 to-transparent flex items-center justify-end">
+              <div className="max-w-md text-right p-8">
+                <h3 className="text-3xl font-bold text-white mb-4">
+                  Client-Centric Approach
+                </h3>
+                <p className="text-xl text-white/90">
+                  Every solution is tailored to meet your unique business goals and objectives.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Stats */}
+      <section className="section-dark py-16 md:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img src={companyCultureImg} alt="Company culture" className="w-full h-full object-cover" />
+        </div>
+        <div className="container-custom relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-dark-foreground mb-4 font-poppins">
               Our Impact in Numbers
