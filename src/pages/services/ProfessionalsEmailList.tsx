@@ -1,32 +1,50 @@
 import React from 'react';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
+import professionalsHeroImage from '@/assets/services-professionals-hero.jpg';
+import professionalsMeetingImage from '@/assets/services-professionals-meeting.jpg';
+import professionalsOfficeImage from '@/assets/services-professionals-office.jpg';
 
 const ProfessionalsEmailList: React.FC = () => {
   const contentBlocks = [
     {
-      title: "Target High-Value Professional Contacts",
-      content: "Access verified email addresses for executives, managers, consultants, and specialists across all industries. Our professionals email list includes C-level executives, directors, senior managers, and department heads who make purchasing decisions for their organizations.",
-      imagePosition: 'left' as const
+      title: "Connect with Top-Level Professionals Across Industries",
+      content: "Access verified contact information for executives, consultants, lawyers, accountants, and other high-level professionals across various industries. Our professionals email lists include contacts from legal services, consulting firms, financial services, and other professional service sectors.",
+      imagePosition: 'left' as const,
+      image: professionalsMeetingImage
     },
     {
-      title: "Job Function and Seniority Filtering",
-      content: "Filter contacts by specific job functions, seniority levels, and decision-making authority. Whether you're targeting CFOs for financial software, HR directors for recruitment tools, or operations managers for supply chain solutions, find the exact professionals you need.",
-      imagePosition: 'right' as const
+      title: "Target by Professional Expertise and Company Type",
+      content: "Filter contacts by specific professional qualifications, certifications, industry expertise, and firm size. Whether you're targeting partners at law firms, senior consultants at top agencies, or C-level executives at Fortune 500 companies, our detailed filtering helps you reach the most relevant decision-makers.",
+      imagePosition: 'right' as const,
+      image: professionalsOfficeImage
     },
     {
-      title: "Multi-Industry Professional Coverage",
-      content: "Our database spans professionals across finance, consulting, legal, education, non-profit, government, and service industries. Each contact includes detailed job title, company information, and professional background to help you craft targeted messages.",
-      imagePosition: 'left' as const
+      title: "Premium Quality Professional Contacts",
+      content: "Our professional lists are continuously updated and verified through multiple professional networks and industry associations. We track career changes, company moves, and professional certifications to ensure you're always reaching active professionals in their current roles.",
+      imagePosition: 'left' as const,
+      image: professionalsMeetingImage
+    },
+    {
+      title: "Drive Business Growth with Professional Networks",
+      content: "Leverage our highly-targeted Professionals List to connect with influential decision-makers across legal, consulting, finance, and other professional services. Our lists help you engage the right prospects who have the authority and budget to make purchasing decisions.",
+      imagePosition: 'right' as const,
+      image: professionalsOfficeImage
+    },
+    {
+      title: "Accelerate Your B2B Professional Outreach",
+      content: "Get started immediately with our clean, verified Professionals List—free from invalid contacts and ready to deliver results. The data is fully customizable, enabling you to target specific professional sectors and seniority levels for maximum impact.",
+      imagePosition: 'left' as const,
+      image: professionalsMeetingImage
     }
   ];
 
   const features = [
     "C-Level Executive Contacts",
-    "Job Function Targeting",
-    "Seniority Level Filtering",
-    "Multi-Industry Coverage",
-    "Decision-Maker Focus",
-    "Professional Background Data"
+    "Professional Service Firms",
+    "Industry Certification Filtering",
+    "Senior Management Targeting",
+    "Professional Association Data",
+    "Geographic Precision Targeting"
   ];
 
   const breadcrumbs = [
@@ -39,11 +57,12 @@ const ProfessionalsEmailList: React.FC = () => {
   return (
     <ServicePageTemplate
       title="Professionals Email List"
-      subtitle="Professionally Verified Email List with Guaranteed Accuracy. Connect with executives and decision-makers across industries"
-      description="Collaborate with DataInGo Solutions to reach leading companies and C-level executives, turning them into your valued customers. Benefit from a premium, trustworthy email list designed to deliver measurable results. Reach high-value professional contacts including executives, managers, and specialists who drive business decisions. Our comprehensive professionals email list provides verified contacts across all major industries and job functions."
+      subtitle="Connect with top-level professionals and executives across industries"
+      description="Reach high-level professionals including executives, lawyers, consultants, and industry leaders with our comprehensive professionals email lists. Our database includes verified contacts from professional service firms, Fortune 500 companies, and industry associations."
       contentBlocks={contentBlocks}
       features={features}
       breadcrumbs={breadcrumbs}
+      heroImage={professionalsHeroImage}
     />
   );
 };

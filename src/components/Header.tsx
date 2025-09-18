@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import logoImage from '@/assets/logo.png';
 
 interface DropdownItem {
   name: string;
@@ -67,9 +68,11 @@ const Header: React.FC = () => {
             to="/" 
             className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
           >
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-hero-text font-bold text-lg md:text-xl">GD</span>
-            </div>
+            <img 
+              src={logoImage} 
+              alt="DataInGo Solutions Logo" 
+              className="h-10 md:h-12 w-auto"
+            />
             <div className="hidden sm:block">
               <h1 className="text-lg md:text-xl font-bold text-nav-text">DataInGo Solutions</h1>
               <p className="text-xs text-nav-text/70">Marketing Solutions</p>
