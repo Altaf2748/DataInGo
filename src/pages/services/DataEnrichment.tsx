@@ -3,6 +3,8 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 import dataEnrichmentImage from '@/assets/services-data-enrichment.jpg';
 import dataAnalyticsImage from '@/assets/services-data-analytics.jpg';
 import dataVerificationImage from '@/assets/services-data-verification.jpg';
+import dataEnrichmentHeroImage from '@/assets/services-data-enrichment-hero.jpg';
+import dataProcessImage from '@/assets/services-data-process.jpg';
 
 const DataEnrichment: React.FC = () => {
   const contentBlocks = [
@@ -13,15 +15,21 @@ const DataEnrichment: React.FC = () => {
       image: dataEnrichmentImage
     },
     {
+      title: "Advanced Data Processing and Enhancement",
+      content: "Our sophisticated data processing systems analyze, clean, and enhance your existing databases using advanced algorithms and multiple data sources. We transform fragmented information into comprehensive customer profiles with complete contact details and business intelligence.",
+      imagePosition: 'right' as const,
+      image: dataProcessImage
+    },
+    {
       title: "Advanced Data Enhancement Techniques",
       content: "Our enrichment process uses multiple data sources and advanced algorithms to append missing contact information, company details, demographic data, and behavioral insights. Increase your data completeness from fragmented records to comprehensive customer profiles.",
-      imagePosition: 'right' as const,
+      imagePosition: 'left' as const,
       image: dataAnalyticsImage
     },
     {
       title: "Real-Time Verification and Updates",
       content: "Keep your data fresh and accurate with ongoing verification and updates. Our system continuously monitors changes in contact information, job titles, company status, and other key data points to ensure your database remains current and reliable.",
-      imagePosition: 'left' as const,
+      imagePosition: 'right' as const,
       image: dataVerificationImage
     }
   ];
@@ -49,6 +57,7 @@ const DataEnrichment: React.FC = () => {
       contentBlocks={contentBlocks}
       features={features}
       breadcrumbs={breadcrumbs}
+      heroImage={dataEnrichmentHeroImage}
     />
   );
 };

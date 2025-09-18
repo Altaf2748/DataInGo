@@ -1,4 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { Resend } from "npm:resend@2.0.0";
+
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -26,50 +29,67 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const formData: FormEmailRequest = await req.json();
     
-    // Get Gmail credentials from environment
-    const gmailUser = Deno.env.get("GMAIL_USER");
-    const gmailPassword = Deno.env.get("GMAIL_APP_PASSWORD");
+    console.log("Processing form submission:", formData);
     
-    if (!gmailUser || !gmailPassword) {
-      throw new Error("Gmail credentials not configured");
-    }
-
     // Prepare email content
     const subject = `New ${formData.formType} Form Submission from ${formData.fullName}`;
-    const body = `
-      New form submission received:
-      
-      Form Type: ${formData.formType}
-      Name: ${formData.fullName}
-      Email: ${formData.email}
-      Phone: ${formData.phone || 'Not provided'}
-      Company: ${formData.company || 'Not provided'}
-      ${formData.message ? `Message: ${formData.message}` : ''}
-      ${formData.requirements ? `Requirements: ${formData.requirements}` : ''}
-      ${formData.category ? `Category: ${formData.category}` : ''}
-      ${formData.country ? `Country: ${formData.country}` : ''}
-      
-      Submitted at: ${new Date().toISOString()}
+    const htmlBody = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+        <h2 style="color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px;">
+          New Form Submission - ${formData.formType}
+        </h2>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <h3 style="color: #495057; margin-top: 0;">Contact Information</h3>
+          <p><strong>Name:</strong> ${formData.fullName}</p>
+          <p><strong>Email:</strong> <a href="mailto:${formData.email}">${formData.email}</a></p>
+          ${formData.phone ? `<p><strong>Phone:</strong> <a href="tel:${formData.phone}">${formData.phone}</a></p>` : ''}
+          ${formData.company ? `<p><strong>Company:</strong> ${formData.company}</p>` : ''}
+        </div>
+        
+        ${formData.requirements ? `
+        <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <h3 style="color: #856404; margin-top: 0;">Requirements</h3>
+          <p style="color: #856404;">${formData.requirements}</p>
+        </div>
+        ` : ''}
+        
+        ${formData.message ? `
+        <div style="background: #d1ecf1; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <h3 style="color: #0c5460; margin-top: 0;">Message</h3>
+          <p style="color: #0c5460;">${formData.message}</p>
+        </div>
+        ` : ''}
+        
+        ${formData.category ? `<p><strong>Category:</strong> ${formData.category}</p>` : ''}
+        ${formData.country ? `<p><strong>Country:</strong> ${formData.country}</p>` : ''}
+        
+        <div style="margin-top: 30px; padding: 15px; background: #e9ecef; border-radius: 8px;">
+          <p style="margin: 0; color: #6c757d; font-size: 14px;">
+            <strong>Submitted:</strong> ${new Date().toLocaleString()}<br>
+            <strong>Form Type:</strong> ${formData.formType}
+          </p>
+        </div>
+      </div>
     `;
 
-    // Send email using Gmail SMTP
-    const emailResponse = await sendGmailEmail({
-      from: gmailUser,
-      to: gmailUser, // Send to your Gmail address
+    // Send email using Resend
+    const emailResponse = await resend.emails.send({
+      from: "DataInGo Solutions <noreply@dataingo.com>",
+      to: ["mark.harris@dataingo.com"],
+      cc: formData.formType === "All Conferences Form" ? ["daniel.brown@dataingo.com"] : undefined,
       subject,
-      body,
-      gmailUser,
-      gmailPassword
+      html: htmlBody,
+      replyTo: formData.email,
     });
 
-    if (!emailResponse.success) {
-      throw new Error(`Failed to send email: ${emailResponse.error}`);
-    }
+    console.log("Email sent successfully:", emailResponse);
 
     return new Response(
       JSON.stringify({ 
         success: true, 
-        message: "Form submitted and email sent successfully" 
+        message: "Form submitted and email sent successfully",
+        emailId: emailResponse.data?.id 
       }),
       {
         status: 200,
@@ -96,50 +116,5 @@ const handler = async (req: Request): Promise<Response> => {
     );
   }
 };
-
-async function sendGmailEmail({
-  from,
-  to,
-  subject,
-  body,
-  gmailUser,
-  gmailPassword
-}: {
-  from: string;
-  to: string;
-  subject: string;
-  body: string;
-  gmailUser: string;
-  gmailPassword: string;
-}) {
-  try {
-    // Create basic email message
-    const message = [
-      `From: ${from}`,
-      `To: ${to}`,
-      `Subject: ${subject}`,
-      `Content-Type: text/plain; charset=utf-8`,
-      '',
-      body
-    ].join('\r\n');
-
-    // Encode message in base64
-    const encodedMessage = btoa(message);
-
-    // Gmail API endpoint
-    const gmailApiUrl = 'https://gmail.googleapis.com/gmail/v1/users/me/messages/send';
-    
-    // For simplicity, we'll use a basic SMTP-like approach
-    // In production, you might want to use the Gmail API with OAuth2
-    console.log('Email would be sent:', { from, to, subject });
-    
-    // For now, just return success (you can implement actual SMTP here)
-    return { success: true };
-    
-  } catch (error) {
-    console.error('Gmail sending error:', error);
-    return { success: false, error: error.message };
-  }
-}
 
 serve(handler);

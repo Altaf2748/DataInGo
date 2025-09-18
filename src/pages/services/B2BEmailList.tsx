@@ -3,6 +3,9 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 import b2bEmailListsImage from '@/assets/services-b2b-email-lists.jpg';
 import emailOutreachImage from '@/assets/services-email-outreach.jpg';
 import dataVerificationImage from '@/assets/services-data-verification.jpg';
+import b2bHeroImage from '@/assets/services-b2b-hero.jpg';
+import emailDashboardImage from '@/assets/services-email-dashboard.jpg';
+import leadGenerationImage from '@/assets/services-lead-generation.jpg';
 
 const B2BEmailList: React.FC = () => {
   const contentBlocks = [
@@ -13,10 +16,22 @@ const B2BEmailList: React.FC = () => {
       image: b2bEmailListsImage
     },
     {
+      title: "Advanced Email Campaign Management",
+      content: "Leverage our sophisticated email dashboard and campaign management tools to track performance, analyze engagement metrics, and optimize your B2B outreach. Monitor open rates, click-through rates, and conversion metrics in real-time to continuously improve your email marketing ROI.",
+      imagePosition: 'right' as const,
+      image: emailDashboardImage
+    },
+    {
       title: "Accelerate Performance and Deliver Impact",
       content: "Stop wasting time on outdated contacts and unresponsive leads. Our B2B email lists are continuously updated and verified through multiple data sources, ensuring 98%+ accuracy rates. With detailed segmentation options including industry, company size, job title, and geographic location, you can create highly targeted campaigns that deliver measurable ROI.",
-      imagePosition: 'right' as const,
+      imagePosition: 'left' as const,
       image: emailOutreachImage
+    },
+    {
+      title: "Lead Generation and Qualification Systems",
+      content: "Transform prospects into qualified leads with our advanced lead generation systems. Our platform includes lead scoring, automated follow-up sequences, and CRM integration to help you manage and nurture prospects throughout the entire sales funnel for maximum conversion rates.",
+      imagePosition: 'right' as const,
+      image: leadGenerationImage
     },
     {
       title: "Scalable, Privacy-Compliant Lists",
@@ -51,6 +66,7 @@ const B2BEmailList: React.FC = () => {
       breadcrumbs={breadcrumbs}
       faqKey="b2b-email-lists"
       serviceName="B2B Email Lists"
+      heroImage={b2bHeroImage}
     />
   );
 };

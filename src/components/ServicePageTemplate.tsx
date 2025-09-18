@@ -14,6 +14,7 @@ interface ContentBlock {
   title: string;
   content: string;
   imagePosition: 'left' | 'right';
+  image?: string;
 }
 
 interface ServicePageTemplateProps {
@@ -28,6 +29,7 @@ interface ServicePageTemplateProps {
   showReasons?: boolean;
   faqKey?: string;
   serviceName?: string;
+  heroImage?: string;
 }
 
 const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
@@ -41,7 +43,8 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
   showProcess = true,
   showReasons = true,
   faqKey,
-  serviceName
+  serviceName,
+  heroImage
 }) => {
   return (
     <div className="min-h-screen bg-background">
@@ -84,6 +87,7 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
           text: "Get Quote",
           href: "/contact"
         }}
+        backgroundImage={heroImage}
       />
 
       {/* Introduction */}
@@ -134,16 +138,26 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({
                 </Link>
               </div>
 
-              {/* Image Placeholder */}
+              {/* Image */}
               <div className={block.imagePosition === 'right' ? 'lg:order-1' : 'lg:order-2'}>
-                <div className="bg-gradient-primary rounded-2xl aspect-[4/3] flex items-center justify-center">
-                  <div className="text-hero-text text-center">
-                    <div className="w-24 h-24 bg-hero-text/20 rounded-xl mx-auto mb-4 flex items-center justify-center">
-                      <CheckCircle className="w-12 h-12" />
-                    </div>
-                    <h4 className="text-xl font-semibold">{block.title}</h4>
+                {block.image ? (
+                  <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+                    <img 
+                      src={block.image} 
+                      alt={block.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                </div>
+                ) : (
+                  <div className="bg-gradient-primary rounded-2xl aspect-[4/3] flex items-center justify-center">
+                    <div className="text-hero-text text-center">
+                      <div className="w-24 h-24 bg-hero-text/20 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                        <CheckCircle className="w-12 h-12" />
+                      </div>
+                      <h4 className="text-xl font-semibold">{block.title}</h4>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>

@@ -3,6 +3,8 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 import webDevelopmentImage from '@/assets/services-web-development.jpg';
 import technologyInnovationImage from '@/assets/home-technology-innovation.jpg';
 import digitalMarketingImage from '@/assets/services-digital-marketing.jpg';
+import webDevHeroImage from '@/assets/services-web-dev-hero.jpg';
+import webDevelopmentProcessImage from '@/assets/services-web-development-process.jpg';
 
 const WebsiteDesignDevelopment: React.FC = () => {
   const contentBlocks = [
@@ -50,7 +52,7 @@ const WebsiteDesignDevelopment: React.FC = () => {
       features={features}
       breadcrumbs={breadcrumbs}
       faqKey="website-design-development"
-      serviceName="Website Design & Development"
+      heroImage={webDevHeroImage}
     />
   );
 };
