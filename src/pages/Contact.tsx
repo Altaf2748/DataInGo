@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
                 Send us your detailed requirements
               </p>
               <a 
-                href="mailto:sales@globaldatasysgroup.com"
+                href="mailto:mark.harris@dataingo.com"
                 className="btn-primary inline-flex items-center space-x-2"
               >
                 <span>Send Email</span>
@@ -162,10 +162,10 @@ const Contact: React.FC = () => {
                         </div>
                         <div>
                           <a 
-                            href="mailto:sales@globaldatasysgroup.com" 
+                            href="mailto:mark.harris@dataingo.com" 
                             className="text-foreground/70 hover:text-primary transition-colors"
                           >
-                            sales@globaldatasysgroup.com
+                            mark.harris@dataingo.com
                           </a>
                         </div>
                       </div>

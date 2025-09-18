@@ -338,7 +338,7 @@ const Services: React.FC = () => {
                 Proven Results
               </h3>
               <p className="text-foreground/70">
-                Over 1,000 successful projects with measurable ROI improvements 
+                Over 2,000 successful projects with measurable ROI improvements 
                 and satisfied clients across industries.
               </p>
             </div>
