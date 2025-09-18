@@ -64,14 +64,11 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center space-x-3 mb-6">
+            <Link to="/" className="flex flex-col items-center space-y-3 mb-6">
               <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
                 <span className="text-hero-text font-bold text-xl">GD</span>
               </div>
-              <div>
-                <h3 className="text-xl font-bold text-secondary-dark-foreground">DataInGo Solutions</h3>
-                <p className="text-secondary-dark-foreground/70 text-sm">Marketing Solutions</p>
-              </div>
+              <p className="text-secondary-dark-foreground/70 text-sm">Marketing Solutions</p>
             </Link>
             
             <p className="text-secondary-dark-foreground/80 mb-6 leading-relaxed">
@@ -176,7 +173,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             {/* Copyright */}
             <p className="text-secondary-dark-foreground/70 text-sm">
-              © {2021} DataInGo Solutions. All rights reserved.
+              © {currentYear} All rights reserved.
             </p>
 
             {/* Legal Links */}

@@ -74,7 +74,6 @@ const Header: React.FC = () => {
               className="h-10 md:h-12 w-auto"
             />
             <div className="hidden sm:block">
-              <h1 className="text-lg md:text-xl font-bold text-nav-text">DataInGo Solutions</h1>
               <p className="text-xs text-nav-text/70">Marketing Solutions</p>
             </div>
           </Link>
