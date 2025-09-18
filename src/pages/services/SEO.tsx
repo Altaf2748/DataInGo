@@ -1,22 +1,28 @@
 import React from 'react';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
+import seoImage from '@/assets/services-seo.jpg';
+import dataAnalyticsImage from '@/assets/services-data-analytics.jpg';
+import webDevelopmentImage from '@/assets/services-web-development.jpg';
 
 const SEO: React.FC = () => {
   const contentBlocks = [
     {
       title: "Improve Your Search Engine Visibility",
       content: "Drive organic traffic and increase your online presence with our comprehensive SEO services. Our team of SEO experts uses proven strategies including keyword research, technical audits, content optimization, and link building to help your website rank higher in search results.",
-      imagePosition: 'left' as const
+      imagePosition: 'left' as const,
+      image: seoImage
     },
     {
       title: "Technical SEO and Performance Optimization",
       content: "Ensure your website meets all technical SEO requirements with our detailed audits and optimization services. We improve site speed, mobile responsiveness, crawlability, and technical structure to give you a competitive edge in search rankings.",
-      imagePosition: 'right' as const
+      imagePosition: 'right' as const,
+      image: dataAnalyticsImage
     },
     {
       title: "Content Strategy and Link Building",
       content: "Build authority and trust with high-quality content and strategic link building campaigns. Our content team creates valuable, SEO-optimized content while our outreach specialists secure high-quality backlinks from authoritative industry websites.",
-      imagePosition: 'left' as const
+      imagePosition: 'left' as const,
+      image: webDevelopmentImage
     }
   ];
 

@@ -1,22 +1,28 @@
 import React from 'react';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
+import dataEnrichmentImage from '@/assets/services-data-enrichment.jpg';
+import dataAnalyticsImage from '@/assets/services-data-analytics.jpg';
+import dataVerificationImage from '@/assets/services-data-verification.jpg';
 
 const DataEnrichment: React.FC = () => {
   const contentBlocks = [
     {
       title: "Transform Incomplete Data into Business Assets",
       content: "Turn your existing customer and prospect databases into powerful business tools with our comprehensive data enrichment services. We fill in missing information, verify accuracy, and add valuable insights that help you better understand and engage with your audience.",
-      imagePosition: 'left' as const
+      imagePosition: 'left' as const,
+      image: dataEnrichmentImage
     },
     {
       title: "Advanced Data Enhancement Techniques",
       content: "Our enrichment process uses multiple data sources and advanced algorithms to append missing contact information, company details, demographic data, and behavioral insights. Increase your data completeness from fragmented records to comprehensive customer profiles.",
-      imagePosition: 'right' as const
+      imagePosition: 'right' as const,
+      image: dataAnalyticsImage
     },
     {
       title: "Real-Time Verification and Updates",
       content: "Keep your data fresh and accurate with ongoing verification and updates. Our system continuously monitors changes in contact information, job titles, company status, and other key data points to ensure your database remains current and reliable.",
-      imagePosition: 'left' as const
+      imagePosition: 'left' as const,
+      image: dataVerificationImage
     }
   ];
 

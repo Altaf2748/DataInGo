@@ -1,22 +1,28 @@
 import React from 'react';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
+import b2bEmailListsImage from '@/assets/services-b2b-email-lists.jpg';
+import emailOutreachImage from '@/assets/services-email-outreach.jpg';
+import dataVerificationImage from '@/assets/services-data-verification.jpg';
 
 const B2BEmailList: React.FC = () => {
   const contentBlocks = [
     {
       title: "Unlock Precise Targeting and Lead Generation",
       content: "Our B2B email lists provide you with verified, up-to-date contact information for decision-makers across industries. Each list is carefully curated and validated to ensure maximum deliverability and response rates. Whether you're targeting C-level executives, department heads, or specific job functions, our comprehensive databases help you reach the right prospects at the right time.",
-      imagePosition: 'left' as const
+      imagePosition: 'left' as const,
+      image: b2bEmailListsImage
     },
     {
       title: "Accelerate Performance and Deliver Impact",
       content: "Stop wasting time on outdated contacts and unresponsive leads. Our B2B email lists are continuously updated and verified through multiple data sources, ensuring 98%+ accuracy rates. With detailed segmentation options including industry, company size, job title, and geographic location, you can create highly targeted campaigns that deliver measurable ROI.",
-      imagePosition: 'right' as const
+      imagePosition: 'right' as const,
+      image: emailOutreachImage
     },
     {
       title: "Scalable, Privacy-Compliant Lists",
       content: "All our B2B email lists are fully compliant with GDPR, CAN-SPAM, and other data protection regulations. We provide transparent opt-out mechanisms and maintain detailed records of data sources and consent. Scale your outreach efforts confidently with our enterprise-grade data infrastructure that supports campaigns of any size.",
-      imagePosition: 'left' as const
+      imagePosition: 'left' as const,
+      image: dataVerificationImage
     }
   ];
 

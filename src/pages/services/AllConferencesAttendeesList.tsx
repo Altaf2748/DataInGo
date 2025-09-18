@@ -3,6 +3,8 @@ import React from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import AllConferencesForm from '@/components/AllConferencesForm';
+import conferenceAttendeesImage from '@/assets/services-conference-attendees.jpg';
+import globalNetworkingImage from '@/assets/services-global-networking.jpg';
 import CategoryGrid from '@/components/CategoryGrid';
 import EventTilesGrid from '@/components/EventTilesGrid';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -137,6 +139,7 @@ const AllConferencesAttendeesList: React.FC = () => {
           text: "View Sample Data",
           href: "/contact"
         }}
+        backgroundImage={conferenceAttendeesImage}
       />
 
       {/* Form Section */}
@@ -233,8 +236,11 @@ const AllConferencesAttendeesList: React.FC = () => {
               </Link>
             </div>
 
-            <div className="bg-gradient-primary rounded-2xl p-8 md:p-12 text-hero-text">
-              <div className="text-center">
+            <div className="bg-gradient-primary rounded-2xl p-8 md:p-12 text-hero-text relative overflow-hidden">
+              <div className="absolute inset-0 opacity-20">
+                <img src={globalNetworkingImage} alt="Global networking" className="w-full h-full object-cover" />
+              </div>
+              <div className="relative text-center">
                 <Users className="w-24 h-24 mx-auto mb-6 opacity-80" />
                 <h3 className="text-2xl font-semibold mb-4">
                   Ready to Connect?
