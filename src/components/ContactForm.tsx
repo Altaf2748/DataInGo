@@ -29,8 +29,8 @@ const contactInfo: ContactInfo[] = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 307 683 8467",
-    href: "tel:+13076838467"
+    value: "",/*+1 307 683 8467*/
+    href: "tel:"/*+1 307 683 8467*/
   },
   {
     icon: Mail,

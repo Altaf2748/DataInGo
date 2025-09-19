@@ -99,7 +99,7 @@ const GdprCompliance: React.FC = () => {
               <div className="bg-accent/20 p-4 rounded-lg mb-6">
                 <p><strong>Email:</strong> daniel.brown@dataingo.com</p>
                 <p><strong>General Contact:</strong> projects@dataingo.com</p>
-                <p><strong>Phone:</strong> +1 307 683 8467</p>
+                <p><strong>Phone:</strong> //+1 307 683 8467</p>
                 <p><strong>Address:</strong> 16192 Coastal Highway, Lewes, DE 19958 USA</p>
               </div>
 

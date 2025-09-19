@@ -84,7 +84,7 @@ const TermsOfService: React.FC = () => {
               </h2>
               <div className="bg-accent/20 p-4 rounded-lg">
                 <p><strong>Email:</strong> projects@dataingo.com</p>
-                <p><strong>Phone:</strong> +1 307 683 8467</p>
+                <p><strong>Phone:</strong> //+1 307 683 8467</p>
                 <p><strong>Address:</strong> 16192 Coastal Highway, Lewes, DE 19958 USA</p>
               </div>
 
