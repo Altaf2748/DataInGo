@@ -1,5 +1,10 @@
 import React from 'react';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
+import TilesGrid from '@/components/TilesGrid';
+import ProcessFlow from '@/components/ProcessFlow';
+import ReasonsGrid from '@/components/ReasonsGrid';
+import ServiceFAQs from '@/components/ServiceFAQs';
+import { Link } from 'react-router-dom';
 import healthcareHeroImage from '@/assets/services-healthcare-hero.jpg';
 import healthcareTechnologyImage from '@/assets/services-healthcare-technology.jpg';
 import healthcareConsultationImage from '@/assets/services-healthcare-consultation.jpg';
@@ -52,6 +57,7 @@ const HealthcareEmailLists: React.FC = () => {
         features={features}
         breadcrumbs={breadcrumbs}
         heroImage={healthcareHeroImage}
+        showTiles={false}
       />
 
       {/* Additional Content Sections */}
@@ -175,6 +181,47 @@ const HealthcareEmailLists: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Import other components manually to control order */}
+      <div>
+        {/* Related Services Tiles */}
+        <TilesGrid 
+          title="Related Services"
+          subtitle="Explore our other data and marketing solutions"
+        />
+
+        {/* Process Flow */}
+        <ProcessFlow />
+
+        {/* Reasons to Choose Us */}
+        <ReasonsGrid />
+
+        {/* Final CTA */}
+        <section className="section-dark py-16 md:py-24">
+          <div className="container-custom text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary-dark-foreground mb-6 font-poppins">
+              Ready to Get Started with Healthcare Email Lists?
+            </h2>
+            <p className="text-xl text-secondary-dark-foreground/80 mb-8 max-w-2xl mx-auto">
+              Contact our experts today for a free consultation and personalized quote.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link 
+                to="/contact"
+                className="bg-hero-text text-secondary-dark font-medium px-8 py-4 rounded-lg hover:bg-hero-text/90 transition-all duration-300"
+              >
+                Get Free Consultation
+              </Link>
+              <a 
+                href="tel:+13076838467"
+                className="border-2 border-hero-text text-hero-text font-medium px-8 py-4 rounded-lg hover:bg-hero-text hover:text-secondary-dark transition-all duration-300"
+              >
+                Call +1 307 683 8467
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
