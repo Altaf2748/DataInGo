@@ -1,4 +1,7 @@
 import React from 'react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { CheckCircle } from 'lucide-react';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 import seoImage from '@/assets/services-seo.jpg';
 import dataAnalyticsImage from '@/assets/services-data-analytics.jpg';
@@ -50,16 +53,59 @@ const SEO: React.FC = () => {
   ];
 
   return (
-    <ServicePageTemplate
-      title="Our SEO Services"
-      subtitle="Improve your search engine visibility and drive organic traffic"
-      description="Boost your online visibility and drive qualified organic traffic with our comprehensive SEO services. Our expert team provides keyword research, technical audits, content optimization, and strategic link building to help your website achieve top search rankings."
-      contentBlocks={contentBlocks}
-      features={features}
-      breadcrumbs={breadcrumbs}
-      faqKey="seo-services"
-      heroImage={seoHeroImage}
-    />
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-hero">
+        <div className="container-custom">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-hero-text mb-6 font-poppins">
+              Our SEO Services
+            </h1>
+            <p className="text-xl text-hero-text/90 max-w-3xl mx-auto leading-relaxed mb-8">
+              Improve your search engine visibility and drive organic traffic
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Boost Your Visibility Section */}
+      <section className="py-20 bg-background">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 font-poppins">
+              Boost Your Visibility with Proven SEO Techniques
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              At DataInGo Solutions, we specialize in crafting SEO strategies that are designed to elevate your online visibility and drive organic traffic to your website. Our expert team uses a combination of on-page and off-page optimization techniques, keyword research, and content development to ensure that your website ranks higher on search engines. Whether you're targeting local or global markets, our SEO services are tailored to help you reach your target audience at the right moment, driving more relevant traffic and potential leads to your business.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features Section */}
+      <section className="py-20 bg-muted/50">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 font-poppins">
+              Key Features
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="flex items-center space-x-3 p-4 card-elevated">
+                <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
+                <span className="text-foreground font-medium">{feature}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   );
 };
 

@@ -220,14 +220,48 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          {/* Google Map Embed */}
-          <div className="w-full h-96 bg-accent/50 rounded-2xl flex items-center justify-center">
-            <div className="text-center text-foreground/70">
-              <MapPin className="w-12 h-12 mx-auto mb-4 opacity-50" />
-              <p>Interactive map would be embedded here</p>
-              <p className="text-sm mt-2">
-                16192 Coastal Highway, Lewes, DE 19958 USA
-              </p>
+          {/* Our Locations */}
+          <div className="bg-card rounded-2xl p-8 mb-8">
+            <h3 className="text-2xl font-bold text-foreground mb-6 font-poppins text-center">
+              Our Global Locations
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="text-center p-4 bg-accent/20 rounded-lg">
+                <MapPin className="w-6 h-6 text-primary mx-auto mb-2" />
+                <div className="text-sm text-foreground/70">
+                  99 Park Avenue 4th Floor<br />New York, NY 10016 USA
+                </div>
+              </div>
+              <div className="text-center p-4 bg-accent/20 rounded-lg">
+                <MapPin className="w-6 h-6 text-primary mx-auto mb-2" />
+                <div className="text-sm text-foreground/70">
+                  1731 N Elm St<br />Commerce, GA 30529 USA
+                </div>
+              </div>
+              <div className="text-center p-4 bg-accent/20 rounded-lg">
+                <MapPin className="w-6 h-6 text-primary mx-auto mb-2" />
+                <div className="text-sm text-foreground/70">
+                  1 North Wall Quay, IFSC<br />Dublin 1, Ireland
+                </div>
+              </div>
+              <div className="text-center p-4 bg-accent/20 rounded-lg">
+                <MapPin className="w-6 h-6 text-primary mx-auto mb-2" />
+                <div className="text-sm text-foreground/70">
+                  8 Marina View #17-01<br />Singapore 018960
+                </div>
+              </div>
+              <div className="text-center p-4 bg-accent/20 rounded-lg">
+                <MapPin className="w-6 h-6 text-primary mx-auto mb-2" />
+                <div className="text-sm text-foreground/70">
+                  16192 Coastal Highway<br />Lewes, DE 19958 USA
+                </div>
+              </div>
+              <div className="text-center p-4 bg-accent/20 rounded-lg">
+                <MapPin className="w-6 h-6 text-primary mx-auto mb-2" />
+                <div className="text-sm text-foreground/70">
+                  Standard Chartered Tower<br />Dubai, UAE
+                </div>
+              </div>
             </div>
           </div>
         </div>
