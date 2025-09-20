@@ -1,8 +1,20 @@
 import React from 'react';
-import ServicePageTemplate from '@/components/ServicePageTemplate';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Hero from '@/components/Hero';
+import TilesGrid from '@/components/TilesGrid';
+import ProcessFlow from '@/components/ProcessFlow';
+import ReasonsGrid from '@/components/ReasonsGrid';
+import ServiceFAQs from '@/components/ServiceFAQs';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import healthcareHeroImage from '@/assets/services-healthcare-hero.jpg';
 import healthcareTechnologyImage from '@/assets/services-healthcare-technology.jpg';
 import healthcareConsultationImage from '@/assets/services-healthcare-consultation.jpg';
+import { serviceFAQs } from '@/data/serviceFAQs';
 
 const HealthcareEmailLists: React.FC = () => {
   const contentBlocks = [
@@ -67,18 +79,108 @@ const HealthcareEmailLists: React.FC = () => {
 
   return (
     <>
-      <ServicePageTemplate
+      <Header />
+      
+      {/* Breadcrumbs */}
+      <div className="bg-muted/30 py-4">
+        <div className="container mx-auto px-4">
+          <nav className="flex items-center space-x-2 text-sm text-muted-foreground">
+            {breadcrumbs.map((crumb, index) => (
+              <React.Fragment key={index}>
+                {index > 0 && <span>/</span>}
+                <Link 
+                  to={crumb.href} 
+                  className={index === breadcrumbs.length - 1 
+                    ? "text-foreground font-medium" 
+                    : "hover:text-foreground transition-colors"
+                  }
+                >
+                  {crumb.name}
+                </Link>
+              </React.Fragment>
+            ))}
+          </nav>
+        </div>
+      </div>
+
+      {/* Hero Section */}
+      <Hero
         title="Healthcare Email Lists"
         subtitle="Customized Healthcare Contact Database for Client Outreach. Connect with healthcare professionals and medical decision-makers"
-        description="Transform healthcare executives from leads to loyal customers with our 100% accurate healthcare email lists. Reach the right people with reliable data that drives results. Reach healthcare professionals, hospital administrators, and medical industry decision-makers with our comprehensive healthcare email lists. All data is collected in full compliance with HIPAA and medical privacy regulations."
-        contentBlocks={contentBlocks}
-        features={features}
-        breadcrumbs={breadcrumbs}
-        heroImage={healthcareHeroImage}
+        primaryCTA={{
+          text: "Enquire Now",
+          href: "/contact"
+        }}
+        secondaryCTA={{
+          text: "Learn More",
+          href: "#features"
+        }}
+        backgroundImage={healthcareHeroImage}
       />
-      
-      {/* Additional Content Sections */}
-      <div className="py-24 bg-background">
+
+      {/* Service Description with Features */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-foreground mb-6">
+                Why Choose Our Healthcare Email Lists?
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                Connect with verified healthcare professionals and medical decision-makers through our comprehensive database
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="features">
+              {features.map((feature, index) => (
+                <Card key={index} className="border-border bg-card">
+                  <CardContent className="p-6">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="h-5 w-5 text-primary" />
+                      <span className="font-medium text-foreground">{feature}</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Content Blocks */}
+      <section className="py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="space-y-32">
+            {contentBlocks.map((block, index) => (
+              <div key={index} className={`flex flex-col lg:flex-row items-center gap-12 ${
+                block.imagePosition === 'right' ? 'lg:flex-row-reverse' : ''
+              }`}>
+                <div className="flex-1 space-y-6">
+                  <h2 className="text-3xl font-bold text-foreground">{block.title}</h2>
+                  <p className="text-lg text-muted-foreground leading-relaxed">{block.content}</p>
+                  <Button asChild size="lg" className="w-fit">
+                    <Link to="/contact">
+                      Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+                {block.image && (
+                  <div className="flex-1">
+                    <img 
+                      src={block.image} 
+                      alt={block.title} 
+                      className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+                    />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Content Sections - Positioned Before Related Services */}
+      <section className="py-24 bg-background">
         <div className="container max-w-4xl mx-auto px-4 space-y-16">
           {additionalContentSections.map((section, index) => (
             <div key={index} className="space-y-6">
@@ -110,7 +212,46 @@ const HealthcareEmailLists: React.FC = () => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Related Services */}
+      <TilesGrid />
+
+      {/* Process Flow */}
+      <ProcessFlow />
+
+      {/* Reasons Grid */}
+      <ReasonsGrid />
+
+      {/* Service FAQs */}
+      <ServiceFAQs 
+        serviceName="Healthcare Email Lists" 
+        faqs={serviceFAQs.healthcareEmailLists || []} 
+      />
+
+      {/* Final CTA Section */}
+      <section className="py-24 bg-primary">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-primary-foreground mb-6">
+              Ready to Connect with Healthcare Professionals?
+            </h2>
+            <p className="text-xl text-primary-foreground/90 mb-8">
+              Start your targeted healthcare marketing campaign today with our verified email lists
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" variant="secondary">
+                <Link to="/contact">Get Your Custom List</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <a href="tel:+1-800-123-4567">Call: +1-800-123-4567</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </>
   );
 };
