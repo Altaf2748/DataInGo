@@ -26,6 +26,29 @@ const HealthcareEmailLists: React.FC = () => {
     }
   ];
 
+  const additionalContentSections = [
+    {
+      title: "Facilitate Engagement with Senior Healthcare Professionals",
+      content: "Looking to engage key influencers in the healthcare sector? Our Verified Healthcare Mailing List offers accurate, up-to-date contact information to help you reach healthcare executives efficiently and effectively. This comprehensive database includes thoroughly verified contacts from hospitals, clinics, healthcare organizations, insurance providers, and more—ensuring you focus your marketing on the right audience. Whether you're promoting medical equipment, healthcare software, or professional services, our mailing list allows you to target high-value decision-makers who are ready to engage. Boost your outreach, improve campaign performance, and drive more conversions with confidence. Save time and resources by accessing a mailing list that delivers real results. Let DataInGo Solutions help you unlock new opportunities in the healthcare industry."
+    },
+    {
+      title: "Get a Customized Healthcare Email Marketing List Tailored to Your Goals",
+      content: "Looking for a custom Healthcare Email Marketing list? You've come to the right place. At DataInGo Solutions, we offer both ready-to-use Healthcare Email Databases and fully customized lists tailored to your unique marketing objectives. Whether you're targeting a niche audience or planning a broad campaign, we provide the accurate data you need to unlock B2B opportunities through multi-channel marketing and lead generation. Planning a targeted outreach campaign? Our Healthcare Industry Mailing Lists can be customized to align with your business goals and budget—helping you strengthen your presence in key markets such as the USA, Canada, Europe, Australia, and more. We offer detailed segmentation options including Full Name, Specialization, Direct Phone Number, Email Address, Mailing Address, Patient Volume, Hospital Affiliation, and other critical data points. Let us help you connect with the right healthcare professionals to drive engagement, increase conversions, and fuel your business growth."
+    },
+    {
+      title: "Targeted Healthcare Email Lists by Professional Category",
+      content: "If you're looking to connect with your target audience in the healthcare industry, choose our comprehensive Healthcare List today. Our extensive database features verified contact details from hospitals, fitness centers, pharmacies, clinics, and more."
+    }
+  ];
+
+  const professionalTitles = [
+    "Allied Health Professionals",
+    "Doctors", 
+    "Nurses",
+    "Pharmacists",
+    "Other Healthcare Professionals"
+  ];
+
   const features = [
     "HIPAA-Compliant Data",
     "Medical Specialty Targeting",
@@ -43,15 +66,52 @@ const HealthcareEmailLists: React.FC = () => {
   ];
 
   return (
-    <ServicePageTemplate
-      title="Healthcare Email Lists"
-      subtitle="Customized Healthcare Contact Database for Client Outreach. Connect with healthcare professionals and medical decision-makers"
-      description="Transform healthcare executives from leads to loyal customers with our 100% accurate healthcare email lists. Reach the right people with reliable data that drives results. Reach healthcare professionals, hospital administrators, and medical industry decision-makers with our comprehensive healthcare email lists. All data is collected in full compliance with HIPAA and medical privacy regulations."
-      contentBlocks={contentBlocks}
-      features={features}
-      breadcrumbs={breadcrumbs}
-      heroImage={healthcareHeroImage}
-    />
+    <>
+      <ServicePageTemplate
+        title="Healthcare Email Lists"
+        subtitle="Customized Healthcare Contact Database for Client Outreach. Connect with healthcare professionals and medical decision-makers"
+        description="Transform healthcare executives from leads to loyal customers with our 100% accurate healthcare email lists. Reach the right people with reliable data that drives results. Reach healthcare professionals, hospital administrators, and medical industry decision-makers with our comprehensive healthcare email lists. All data is collected in full compliance with HIPAA and medical privacy regulations."
+        contentBlocks={contentBlocks}
+        features={features}
+        breadcrumbs={breadcrumbs}
+        heroImage={healthcareHeroImage}
+      />
+      
+      {/* Additional Content Sections */}
+      <div className="py-24 bg-background">
+        <div className="container max-w-4xl mx-auto px-4 space-y-16">
+          {additionalContentSections.map((section, index) => (
+            <div key={index} className="space-y-6">
+              <h2 className="text-3xl font-bold text-foreground mb-6">{section.title}</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">{section.content}</p>
+            </div>
+          ))}
+          
+          {/* Healthcare Mailing Lists by Professional Title */}
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold text-foreground mb-6">Healthcare Mailing Lists Sorted by Professional Title</h2>
+            <ul className="space-y-3">
+              {professionalTitles.map((title, index) => (
+                <li key={index} className="flex items-center text-lg text-muted-foreground">
+                  <span className="font-semibold text-primary mr-3">{index + 1}.</span>
+                  {title}
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          {/* Best-Selling Healthcare Contact Solutions */}
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold text-foreground mb-6">Best-Selling Healthcare Contact and Database Solutions</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Our comprehensive healthcare database includes verified contact information for medical professionals across all specialties and healthcare sectors. 
+              From hospital administrators to specialty physicians, our lists help you reach the right healthcare decision-makers with precision targeting and 
+              HIPAA-compliant data collection practices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
