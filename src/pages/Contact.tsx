@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
                 href="tel:+13076838467"
                 className="btn-primary inline-flex items-center space-x-2"
               >
-                <span>//+1 307 683 8467</span>
+                <span>{/*+1 307 683 8467*/}</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -142,7 +142,7 @@ const Contact: React.FC = () => {
                         href="tel:+13076838467" 
                         className="text-foreground/70 hover:text-primary transition-colors"
                       >
-                        //+1 307 683 8467
+                        {/*+1 307 683 8467*/}
                       </a>
                     </div>
                   </div>

@@ -97,7 +97,7 @@ const CookiePolicy: React.FC = () => {
               </p>
               <div className="bg-accent/20 p-4 rounded-lg">
                 <p><strong>Email:</strong> projects@dataingo.com</p>
-                <p><strong>Phone:</strong> //+1 307 683 8467</p>
+                <p><strong>Phone:</strong> {/*+1 307 683 8467*/}</p>
               </div>
 
               <p className="text-sm text-foreground/60 mt-8">

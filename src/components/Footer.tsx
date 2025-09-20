@@ -91,7 +91,7 @@ const Footer: React.FC = () => {
                   href="tel:" /*+1 307 683 8467*/
                   className="text-secondary-dark-foreground/80 hover:text-primary-start transition-colors"
                 >
-                  //+1 307 683 8467 
+                  {/*+1 307 683 8467*/}
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-sm">
