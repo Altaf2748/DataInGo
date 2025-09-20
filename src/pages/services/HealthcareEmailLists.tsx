@@ -205,11 +205,105 @@ const HealthcareEmailLists: React.FC = () => {
           {/* Best-Selling Healthcare Contact Solutions */}
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-foreground mb-6">Best-Selling Healthcare Contact and Database Solutions</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Our comprehensive healthcare database includes verified contact information for medical professionals across all specialties and healthcare sectors. 
-              From hospital administrators to specialty physicians, our lists help you reach the right healthcare decision-makers with precision targeting and 
-              HIPAA-compliant data collection practices.
-            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+              {[
+                "Anesthetists Email List",
+                "Athletic Therapist Email List", 
+                "Audiologists Email List",
+                "Cancer Specialist List",
+                "Cardiologists Mailing List",
+                "Chief Medical Officer Email List",
+                "Chiropractors Email List",
+                "Clinical Lab Scientists Email List",
+                "Cosmetologists Email List",
+                "Dental Laboratories Email List",
+                "Dermatologists Email List",
+                "Diabetes Specialists Email List",
+                "Diagnostic Radiologists Email List",
+                "Emergency Medicine Specialists Email List",
+                "ENT Specialist Email List",
+                "Family Medicine Directors Email List",
+                "Family/Marital Therapists Email List",
+                "Gastroenterologists Email List",
+                "Gastroenterology Directors List",
+                "General Surgeons Email List",
+                "Geriatric Services Directors Email List",
+                "Global Physician Email List",
+                "Gynecologists Email List",
+                "Healthcare Executives Email List",
+                "Heart Disease Specialist Email List",
+                "Hematologist Email List",
+                "Hospital Administrators Email List",
+                "Hospital Decision Makers List",
+                "Hospital Executives Email List",
+                "Hospital HR Directors Email List",
+                "Hospital Office Managers List",
+                "Hypnotists Email List",
+                "Medical Geneticist Email List",
+                "Naturopathic Physicians Email List",
+                "Neurologists Email List",
+                "Neurosurgeons Email List",
+                "Nurse Managers Email List",
+                "Nurses Email List",
+                "Nursing Home Operators Email List",
+                "Nursing Homes Email List",
+                "Nutritionist Medicine Physician Email List",
+                "Obstetrics Email List",
+                "Oncologists Email List",
+                "Oncology Nurses Email List",
+                "Optometrists Email List",
+                "Oral and Maxillofacial Surgeons Email List",
+                "Oral Surgeons Email List",
+                "Orthodontists Email List",
+                "Orthopedic Surgeons List",
+                "Orthopedists Email List",
+                "Pathologists Email List",
+                "Pediatricians Email List",
+                "Pharmacy Directors Email List",
+                "Physical Therapist Email List",
+                "Physician Email List",
+                "Physician Recruiters Email List",
+                "Plastic Surgeons Email List",
+                "Psychiatrists Email List",
+                "Psychologists Email List",
+                "Radiologists Email List",
+                "Radiology Directors Email List",
+                "Registered Nurses Email List",
+                "Respiratory Therapists Email List",
+                "Surgeon Email List",
+                "Urologist Email List",
+                "Veterinarians Email Leads",
+                "Physicians Email List",
+                "Dentists Email List",
+                "Doctors Email List",
+                "Dental Surgery Email List",
+                "Anesthesiology Email List",
+                "Diagnostic Radiology Email List",
+                "Chiropractor Email List",
+                "Emergency Email List",
+                "Oncologist Email List",
+                "Otolaryngology Email List",
+                "Family Medicine Email List",
+                "Dermatologist Email List",
+                "Pharmaceuticals Email List",
+                "Ophthalmologists Email List",
+                "Pathologist Email List",
+                "Medical Director Email List",
+                "Naturopathic Medicine Email List",
+                "Internal Medicine Email List",
+                "General Surgery Email List",
+                "Certified Registered Nurse Email List",
+                "Cardiologist Email List",
+                "Physical Medicine Email List",
+                "General Practice Email List",
+                "Gastroenterology Email List"
+              ].map((item, index) => (
+                <div key={index} className="flex items-center text-sm text-muted-foreground p-3 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors">
+                  <CheckCircle className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
