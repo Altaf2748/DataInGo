@@ -247,6 +247,36 @@ const CustomMailList: React.FC = () => {
             </p>
           </div>
           
+          {/* Drive your campaigns to success */}
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold text-foreground mb-6">Drive your campaigns to success!</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Our data enrichment solutions empower you to precisely target diverse markets through customized products and tools. We deliver tailored services that cater to varied business requirements, complemented by expert consulting to refine your strategy. Beyond that, we help optimize current contracts, boost performance, and unlock upselling opportunities. Additionally, we provide a range of supplementary software, outsourced services, and continuous support to elevate your business operations.
+            </p>
+          </div>
+          
+          {/* Assist you in accomplishing your campaign targets */}
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold text-foreground mb-6">Assist you in accomplishing your campaign targets?</h2>
+            <div className="space-y-4">
+              {[
+                "Gain accurate audience data from the very beginning.",
+                "Leverage intelligent data to identify intent signals and prompt timely actions.",
+                "Accelerate deal closures with reduced lead cycles.",
+                "Execute campaigns customized for targeted geographic locations.",
+                "Design personalized campaigns using more than 72 data intelligence fields.",
+                "Identify and connect with key decision-makers to drive success.",
+                "Strategically plan your campaign targets ahead of time.",
+                "Use insights on prospect keywords and advertising spend to refine your strategy."
+              ].map((item, index) => (
+                <div key={index} className="flex items-start space-x-3 p-4 bg-muted/30 rounded-lg">
+                  <CheckCircle className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                  <p className="text-muted-foreground">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          
           {/* Individually Crafted Mailing Lists */}
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-foreground mb-6">Individually Crafted Mailing Lists</h2>
