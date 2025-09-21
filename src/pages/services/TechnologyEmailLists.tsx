@@ -63,14 +63,14 @@ const TechnologyEmailLists: React.FC = () => {
   ];
 
   const keyFeatures = [
-    "Precise Targeting: Our list is meticulously segmented by industry, job title, company size, and technology usage, ensuring you reach the most relevant prospects.",
-    "Verified and Up-to-Date Data: Access accurate, regularly updated contact information, ensuring high deliverability and reliable outreach.",
-    "Broad Tech Coverage: Engage with a diverse range of sectors, from software development and IT services to cybersecurity, cloud computing, SaaS, AI, and beyond.",
-    "Fully Customizable: Tailor the list to focus on specific regions, industries, or company sizes, aligning perfectly with your campaign goals.",
-    "High-Quality, Validated Leads: We provide clean, opt-in leads, verified to enhance your conversion potential.",
-    "Cost-Effective Solutions: Gain access to targeted, high-quality data at a competitive price, ensuring a strong return on investment.",
-    "Improved Engagement: Connect with the right audience, boosting your campaign's open rates and click-through performance.",
-    "Comprehensive Contact Details: Each contact entry includes essential information like job title and company name, enabling more personalized and effective outreach."
+    <span><strong>Precise Targeting:</strong> Our list is meticulously segmented by industry, job title, company size, and technology usage, ensuring you reach the most relevant prospects.</span>,
+    <span><strong>Verified and Up-to-Date Data:</strong> Access accurate, regularly updated contact information, ensuring high deliverability and reliable outreach.</span>,
+    <span><strong>Broad Tech Coverage:</strong> Engage with a diverse range of sectors, from software development and IT services to cybersecurity, cloud computing, SaaS, AI, and beyond.</span>,
+    <span><strong>Fully Customizable:</strong> Tailor the list to focus on specific regions, industries, or company sizes, aligning perfectly with your campaign goals.</span>,
+    <span><strong>High-Quality, Validated Leads:</strong> We provide clean, opt-in leads, verified to enhance your conversion potential.</span>,
+    <span><strong>Cost-Effective Solutions:</strong> Gain access to targeted, high-quality data at a competitive price, ensuring a strong return on investment.</span>,
+    <span><strong>Improved Engagement:</strong> Connect with the right audience, boosting your campaign's open rates and click-through performance.</span>,
+    <span><strong>Comprehensive Contact Details:</strong> Each contact entry includes essential information like job title and company name, enabling more personalized and effective outreach.</span>
   ];
 
   const bestSellingDatabases = [

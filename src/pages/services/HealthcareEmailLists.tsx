@@ -54,11 +54,11 @@ const HealthcareEmailLists: React.FC = () => {
   ];
 
   const professionalTitles = [
-    "Allied Health Professionals",
-    "Doctors", 
-    "Nurses",
-    "Pharmacists",
-    "Other Healthcare Professionals"
+    <span><strong>Allied Health Professionals:</strong> Includes email contacts for nurses, technicians, therapists, and other specialists who support doctors and surgeons in patient care.</span>,
+    <span><strong>Doctors:</strong> Access email addresses for physicians across various specialties, including primary care, surgery, pediatrics, and more.</span>,
+    <span><strong>Nurses:</strong> Connect with registered nurses, nurse practitioners, and nursing administrators in hospitals, clinics, and other healthcare settings.</span>,
+    <span><strong>Pharmacists:</strong> Reach out to pharmacists working in retail, hospital, and clinical settings, with a focus on medication management and patient care.</span>,
+    <span><strong>Other Healthcare Professionals:</strong> Target a diverse range of healthcare workers, including medical assistants, health coaches, and wellness consultants.</span>
   ];
 
   const features = [
