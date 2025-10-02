@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import logoImage from '@/assets/logo.png';
@@ -73,6 +73,15 @@ const Header: React.FC = () => {
       setOpenDropdown(null);
     }, 300); // 300ms delay before closing
   };
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (closeTimeout.current) {
+        clearTimeout(closeTimeout.current);
+      }
+    };
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 bg-nav-bg/95 backdrop-blur-sm border-b border-border">
