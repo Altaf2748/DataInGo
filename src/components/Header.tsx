@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import logoImage from '@/assets/logo.png';
@@ -17,6 +17,7 @@ interface NavItem {
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const closeTimeout = useRef<NodeJS.Timeout | null>(null);
   const location = useLocation();
 
   const navigation: NavItem[] = [
@@ -59,6 +60,20 @@ const Header: React.FC = () => {
     setOpenDropdown(openDropdown === itemName ? null : itemName);
   };
 
+  const handleMouseEnter = (itemName: string) => {
+    if (closeTimeout.current) {
+      clearTimeout(closeTimeout.current);
+      closeTimeout.current = null;
+    }
+    setOpenDropdown(itemName);
+  };
+
+  const handleMouseLeave = () => {
+    closeTimeout.current = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 300); // 300ms delay before closing
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-nav-bg/95 backdrop-blur-sm border-b border-border">
       <div className="container-custom">
@@ -91,8 +106,8 @@ const Header: React.FC = () => {
                           ? 'text-nav-hover' 
                           : ''
                       }`}
-                      onMouseEnter={() => setOpenDropdown(item.name)}
-                      onMouseLeave={() => setOpenDropdown(null)}
+                      onMouseEnter={() => handleMouseEnter(item.name)}
+                      onMouseLeave={handleMouseLeave}
                     >
                       <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
@@ -100,9 +115,9 @@ const Header: React.FC = () => {
                     
                     {openDropdown === item.name && (
                       <div 
-                        className="absolute top-full left-0 mt-2 w-64 bg-card rounded-lg shadow-hover border border-border z-50"
-                        onMouseEnter={() => setOpenDropdown(item.name)}
-                        onMouseLeave={() => setOpenDropdown(null)}
+                        className="absolute top-full left-0 mt-0 w-64 bg-card rounded-lg shadow-hover border border-border z-50"
+                        onMouseEnter={() => handleMouseEnter(item.name)}
+                        onMouseLeave={handleMouseLeave}
                       >
                         <div className="py-2">
                           {item.dropdown.map((dropItem) => (
