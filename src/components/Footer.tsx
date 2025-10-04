@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2">
             <Link to="/" className="flex flex-col items-center space-y-3 mb-6">
               <div>
-                <img src="src\assets\logo_footer.png" alt="Logo" className="w-80 h-20 object-contain" />
+                <img src="/src/assets/logo_footer.png" alt="DataInGo Solutions" className="w-80 h-20 object-contain" />
               </div>
               <p className="text-secondary-dark-foreground/70 text-sm">Marketing Solutions</p>
             </Link>
