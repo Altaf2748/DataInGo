@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
                 Speak with our experts immediately
               </p>
               <a 
-                href="tel:+13076838467"
+                href="tel:"/*+1 307 683 8467*/
                 className="btn-primary inline-flex items-center space-x-2"
               >
                 <span>{/*+1 307 683 8467*/}</span>
@@ -128,8 +128,8 @@ const Contact: React.FC = () => {
                     <div>
                       <div className="font-medium text-foreground">Address</div>
                       <div className="text-foreground/70">
-                        1309 Coffeen Avenue, STE 1200<br />
-                        Sheridan, Wyoming 82801
+                        16192 Coastal Highway,<br />
+                        Lewes, DE 19958 USA
                       </div>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ const Contact: React.FC = () => {
                     <div>
                       <div className="font-medium text-foreground">Phone</div>
                       <a 
-                        href="tel:+13076838467" 
+                        href="tel:" /*+1 307 683 8467*/
                         className="text-foreground/70 hover:text-primary transition-colors"
                       >
                         {/*+1 307 683 8467*/}
