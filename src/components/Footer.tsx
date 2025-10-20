@@ -58,9 +58,15 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-secondary-dark text-secondary-dark-foreground">
+    <footer className="bg-secondary-dark text-secondary-dark-foreground relative overflow-hidden">
+      {/* Halloween Decorations */}
+      <div className="absolute top-4 left-4 text-4xl animate-pulse opacity-50">🎃</div>
+      <div className="absolute top-4 right-4 text-4xl animate-bounce opacity-50">👻</div>
+      <div className="absolute bottom-4 left-1/4 text-3xl animate-pulse opacity-40">🦇</div>
+      <div className="absolute bottom-4 right-1/4 text-3xl animate-bounce opacity-40">🕷️</div>
+      
       {/* Main Footer */}
-      <div className="container-custom py-16">
+      <div className="container-custom py-16 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
