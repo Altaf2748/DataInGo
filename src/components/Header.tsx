@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import logoImage from '@/assets/logo.png';
-import HalloweenDecorations from './HalloweenDecorations';
 
 interface DropdownItem {
   name: string;
@@ -85,8 +84,7 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-nav-bg/95 backdrop-blur-sm border-b border-orange-500/30 shadow-[0_2px_15px_rgba(255,165,0,0.3)] relative">
-      <HalloweenDecorations />
+    <header className="sticky top-0 z-50 bg-nav-bg/95 backdrop-blur-sm border-b border-border">
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
