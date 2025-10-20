@@ -10,6 +10,7 @@ import {
   Phone,
   MapPin
 } from 'lucide-react';
+import HalloweenDecorations from './HalloweenDecorations';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -58,9 +59,25 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-secondary-dark text-secondary-dark-foreground">
+    <footer className="bg-secondary-dark text-secondary-dark-foreground border-t-2 border-orange-500/30 shadow-[0_-2px_15px_rgba(255,165,0,0.3)] relative">
+      <div className="relative">
+        <HalloweenDecorations />
+      </div>
+      
+      {/* Floating Halloween elements at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 pointer-events-none overflow-hidden h-16">
+        <div className="relative w-full h-full flex justify-around items-end pb-2">
+          <span className="text-2xl animate-bounce" style={{ animationDelay: '0s', animationDuration: '2s' }}>🎃</span>
+          <span className="text-2xl animate-bounce" style={{ animationDelay: '0.3s', animationDuration: '2.2s' }}>👻</span>
+          <span className="text-2xl animate-bounce" style={{ animationDelay: '0.6s', animationDuration: '1.8s' }}>🦇</span>
+          <span className="text-2xl animate-bounce" style={{ animationDelay: '0.9s', animationDuration: '2.1s' }}>🕷️</span>
+          <span className="text-2xl animate-bounce" style={{ animationDelay: '1.2s', animationDuration: '1.9s' }}>🍬</span>
+          <span className="text-2xl animate-bounce" style={{ animationDelay: '0.4s', animationDuration: '2.3s' }}>🎃</span>
+        </div>
+      </div>
+
       {/* Main Footer */}
-      <div className="container-custom py-16">
+      <div className="container-custom py-16 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
