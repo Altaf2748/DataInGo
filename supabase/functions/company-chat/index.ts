@@ -8,6 +8,88 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// Simple in-memory rate limiting (resets on function cold start)
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT_MAX = 20; // Max requests per window
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const record = rateLimitMap.get(ip);
+  
+  if (!record || now > record.resetTime) {
+    rateLimitMap.set(ip, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS });
+    return true;
+  }
+  
+  if (record.count >= RATE_LIMIT_MAX) {
+    return false;
+  }
+  
+  record.count++;
+  return true;
+}
+
+// Message validation constants
+const MAX_MESSAGE_LENGTH = 1000;
+const MAX_MESSAGES = 20;
+
+interface ChatMessage {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
+function validateMessages(data: unknown): { valid: true; messages: ChatMessage[] } | { valid: false; error: string } {
+  if (!data || typeof data !== 'object') {
+    return { valid: false, error: 'Invalid request body' };
+  }
+
+  const obj = data as Record<string, unknown>;
+
+  if (!obj.messages || !Array.isArray(obj.messages)) {
+    return { valid: false, error: 'Messages must be an array' };
+  }
+
+  if (obj.messages.length === 0) {
+    return { valid: false, error: 'At least one message is required' };
+  }
+
+  if (obj.messages.length > MAX_MESSAGES) {
+    return { valid: false, error: `Too many messages (max ${MAX_MESSAGES})` };
+  }
+
+  const validatedMessages: ChatMessage[] = [];
+
+  for (let i = 0; i < obj.messages.length; i++) {
+    const msg = obj.messages[i];
+    
+    if (!msg || typeof msg !== 'object') {
+      return { valid: false, error: `Invalid message at index ${i}` };
+    }
+
+    const msgObj = msg as Record<string, unknown>;
+
+    if (typeof msgObj.role !== 'string' || !['user', 'assistant'].includes(msgObj.role)) {
+      return { valid: false, error: `Invalid role at message ${i}` };
+    }
+
+    if (typeof msgObj.content !== 'string') {
+      return { valid: false, error: `Invalid content at message ${i}` };
+    }
+
+    if (msgObj.content.length > MAX_MESSAGE_LENGTH) {
+      return { valid: false, error: `Message ${i} is too long (max ${MAX_MESSAGE_LENGTH} characters)` };
+    }
+
+    validatedMessages.push({
+      role: msgObj.role as 'user' | 'assistant',
+      content: msgObj.content.trim()
+    });
+  }
+
+  return { valid: true, messages: validatedMessages };
+}
+
 const COMPANY_CONTEXT = `You are a helpful assistant for DataIngo, a B2B data and marketing services company. 
 
 IMPORTANT: You must ONLY answer questions about DataIngo and its services. If a user asks about anything unrelated to DataIngo, politely redirect them to company-related topics.
@@ -66,10 +148,48 @@ serve(async (req) => {
   }
 
   try {
-    const { messages } = await req.json();
+    // Get client IP for rate limiting
+    const clientIp = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 
+                     req.headers.get('cf-connecting-ip') || 
+                     'unknown';
+
+    // Check rate limit
+    if (!checkRateLimit(clientIp)) {
+      console.log(`Rate limit exceeded for IP: ${clientIp}`);
+      return new Response(
+        JSON.stringify({ error: 'Too many requests. Please try again later.' }),
+        {
+          status: 429,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
+      );
+    }
+
+    const rawData = await req.json();
+
+    // Validate messages
+    const validation = validateMessages(rawData);
+    if (!validation.valid) {
+      return new Response(
+        JSON.stringify({ error: validation.error }),
+        {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
+      );
+    }
+
+    const { messages } = validation;
 
     if (!openAIApiKey) {
-      throw new Error('OPENAI_API_KEY is not configured');
+      console.error('OPENAI_API_KEY is not configured');
+      return new Response(
+        JSON.stringify({ error: 'Service temporarily unavailable.' }),
+        {
+          status: 503,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
+      );
     }
 
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -90,9 +210,15 @@ serve(async (req) => {
     });
 
     if (!response.ok) {
-      const error = await response.text();
-      console.error('OpenAI API error:', error);
-      throw new Error('Failed to get response from AI');
+      const errorText = await response.text();
+      console.error('OpenAI API error:', response.status, errorText);
+      return new Response(
+        JSON.stringify({ error: 'Service temporarily unavailable. Please try again later.' }),
+        {
+          status: 503,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        }
+      );
     }
 
     const data = await response.json();
@@ -103,9 +229,12 @@ serve(async (req) => {
     });
   } catch (error) {
     console.error('Error in company-chat function:', error);
-    return new Response(JSON.stringify({ error: error.message }), {
-      status: 500,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
+    return new Response(
+      JSON.stringify({ error: 'Service temporarily unavailable. Please try again later.' }),
+      {
+        status: 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      }
+    );
   }
 });
