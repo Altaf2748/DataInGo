@@ -24,7 +24,7 @@ export type Database = {
           form_type: string
           full_name: string
           id: string
-          ip_address: unknown | null
+          ip_address: unknown
           message: string | null
           phone: string | null
           requirements: string | null
@@ -40,7 +40,7 @@ export type Database = {
           form_type: string
           full_name: string
           id?: string
-          ip_address?: unknown | null
+          ip_address?: unknown
           message?: string | null
           phone?: string | null
           requirements?: string | null
@@ -56,7 +56,7 @@ export type Database = {
           form_type?: string
           full_name?: string
           id?: string
-          ip_address?: unknown | null
+          ip_address?: unknown
           message?: string | null
           phone?: string | null
           requirements?: string | null
