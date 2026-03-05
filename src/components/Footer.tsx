@@ -7,7 +7,7 @@ import {
   Instagram, 
   Youtube,
   Mail,
-  Phone,
+  
   MapPin
 } from 'lucide-react';
 
@@ -84,15 +84,6 @@ const Footer: React.FC = () => {
                 <span className="text-secondary-dark-foreground/80">
                   16192 Coastal Highway, Lewes, DE 19958 USA
                 </span>
-              </div>
-              <div className="flex items-center space-x-3 text-sm">
-                <Phone className="w-4 h-4 text-primary-start flex-shrink-0" />
-                <a 
-                  href="tel:" /*+1 307 683 8467*/
-                  className="text-secondary-dark-foreground/80 hover:text-primary-start transition-colors"
-                >
-                  {/*+1 307 683 8467*/}
-                </a>
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <Mail className="w-4 h-4 text-primary-start flex-shrink-0" />
