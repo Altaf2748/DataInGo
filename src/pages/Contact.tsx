@@ -4,7 +4,7 @@ import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 import { 
   MapPin, 
-  Phone, 
+   
   Mail, 
   Clock,
   ArrowRight,
@@ -36,27 +36,7 @@ const Contact: React.FC = () => {
       {/* Quick Contact Options */}
       <section className="py-16 bg-background">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {/* Call Us */}
-            <div className="card-elevated p-6 text-center group">
-              <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Phone className="w-8 h-8 text-hero-text" />
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2 font-poppins">
-                Call Us Directly
-              </h3>
-              <p className="text-foreground/70 mb-4">
-                Speak with our experts immediately
-              </p>
-              <a 
-                href="tel:"/*+1 307 683 8467*/
-                className="btn-primary inline-flex items-center space-x-2"
-              >
-                <span>{/*+1 307 683 8467*/}</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {/* Email Us */}
             <div className="card-elevated p-6 text-center group">
               <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -135,19 +115,6 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium text-foreground">Phone</div>
-                      <a 
-                        href="tel:" /*+1 307 683 8467*/
-                        className="text-foreground/70 hover:text-primary transition-colors"
-                      >
-                        {/*+1 307 683 8467*/}
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3">
                     <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <div className="font-medium text-foreground">Email</div>
@@ -203,7 +170,6 @@ const Contact: React.FC = () => {
                     <div className="font-medium text-foreground mb-2">Response Time</div>
                     <div className="text-foreground/70">
                       Email: Within 2 hours<br />
-                      Phone: Immediate<br />
                       Emergency: Within 30 minutes
                     </div>
                   </div>
@@ -295,7 +261,7 @@ const Contact: React.FC = () => {
             </div>
 
             <div className="card-elevated p-6 text-center">
-              <Phone className="w-12 h-12 text-primary mx-auto mb-4" />
+              <MessageSquare className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-foreground mb-3">
                 Live Chat Support
               </h3>

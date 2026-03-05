@@ -298,9 +298,6 @@ const ProfessionalsEmailList: React.FC = () => {
               <Button asChild size="lg" variant="secondary">
                 <Link to="/contact">Get Your Custom List</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                <a href="tel:+1-800-123-4567">Call: +1-800-123-4567</a>
-              </Button>
             </div>
           </div>
         </div>

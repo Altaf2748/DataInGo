@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { submitFormToDatabase } from '@/lib/formSubmission';
 import { supabase } from "@/integrations/supabase/client";
@@ -25,12 +25,6 @@ const contactInfo: ContactInfo[] = [
     icon: MapPin,
     label: "Address",
     value: "16192 Coastal Highway, Lewes, DE 19958 USA" 
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "",/*+1 307 683 8467*/
-    href: "tel:"/*+1 307 683 8467*/
   },
   {
     icon: Mail,

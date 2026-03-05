@@ -302,12 +302,6 @@ const AllConferencesAttendeesList: React.FC = () => {
             >
               Get Conference Attendees List
             </Link>
-            <a 
-              href="tel:"/*+1 307 683 8467*/
-              className="border-2 border-hero-text text-hero-text font-medium px-8 py-4 rounded-lg hover:bg-hero-text hover:text-secondary-dark transition-all duration-300"
-            >
-              Call {/*+1 307 683 8467*/}
-            </a>
           </div>
         </div>
       </section>
